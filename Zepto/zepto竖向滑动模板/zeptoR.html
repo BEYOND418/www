@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/animations.css">
+	<script src="js/zepto.js"></script>
+	<!--<script src="js/zepto.min.js"></script>-->
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html,body{
+			height: 100%;
+		}
+		.page_1_1,.page_2_1,.page_3_1{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+		.page_1_1{
+			background: red;
+		}
+		.page_2_1{
+			background: yellow;
+		}
+		.page_3_1{
+			background: aqua;
+		}
+		.hide{
+			display: none;
+		}
+		.current{
+			z-index: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="page_1_1 current" ></div>
+	<div class="page_2_1 hide"></div>
+	<div class="page_3_1 hide"></div>
+	<script>
+	document.addEventListener('touchmove',function(event){
+		event.preventDefault(); 
+	},false);
+	
+	var nRow=1;
+	var nCol=1;
+	var lRow=0;
+	var lCol=0;
+	var up=1;
+	var down=2;
+	var left=3;
+	var right=4;
+	var ani = false;
+	$(document).swipeUp(function(){
+		if(ani){return};
+		lRow=nRow;
+		lCol=nCol;
+		if(lRow!=3){
+			nRow += 1;
+			col = 1;
+			pageMove(up);
+		}
+	});
+	$(document).swipeDown(function(){
+		if(ani){return};
+		lRow=nRow;
+		lCol=nCol;
+		if(lRow!=1){
+			nRow -=1;
+			col =1;
+			pageMove(down);
+		}
+	});
+	function pageMove(x){
+		var prev = ".page_"+lRow+"_"+lCol;
+		var next = ".page_"+nRow+"_"+nCol;
+		console.log(prev,next);
+		var outClass,inClass;
+		if(x==up){
+			outClass = "pt-page-moveToTop";
+			inClass = "pt-page-moveFromBottom";
+		}
+		if(x==down){
+			outClass = "pt-page-moveToBottom";
+			inClass = "pt-page-moveFromTop";
+		}
+		ani = true;
+		$(prev).addClass(outClass);
+		$(next).removeClass("hide");
+		$(next).addClass(inClass);
+		setTimeout(function(){
+			$(prev).removeClass("current")
+			$(prev).removeClass(outClass);
+			$(prev).addClass("hide");
+			$(next).addClass("current");
+			$(next).removeClass(inClass);
+			ani = false;
+		},600);
+	}
+	</script>
+</body>
+</html>

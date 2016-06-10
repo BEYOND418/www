@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/animations.css">
+	<script src="js/zepto.js"></script>
+	<!--<script src="js/zepto.min.js"></script>-->
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html,body{
+			height: 100%;
+		}
+		.page_1_1,.page_2_1,.page_3_1,.page_2_2,.page_2_3{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+		.page_1_1{
+			background: red;
+		}
+		.page_2_1{
+			background: yellow;
+		}
+		.page_3_1{
+			background: purple;
+		}
+		.page_2_2{
+			background: greenyellow;
+		}
+		.page_2_3{
+			background: aqua;
+		}
+		.hide{
+			display: none;
+		}
+		.current{
+			z-index: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="page_1_1 current" ></div>
+	<div class="page_2_1 hide"></div>
+	<div class="page_2_2 hide" ></div>
+	<div class="page_2_3 hide"></div>
+	<div class="page_3_1 hide"></div>
+	<script>
+	document.addEventListener('touchmove',function(event){
+		event.preventDefault(); 
+	},false);
+	//nRow 和 nCol表示当前页（刚滑入）的行列序号
+	//lRow 和 lCol表示上一页（刚滑走）的行列序号
+	//
+	var nRow=1;
+	var nCol=1;
+	var lRow=0;
+	var lCol=0;
+
+	//up down left right四个变量用来表示 滑页的动作（你到底是往哪个方向滑的）,这里的设置是为之后的pageMove函数判断做准备的
+	var up=1;
+	var down=2;
+	var left=3;
+	var right=4;
+
+	//ani是判断当前是否有动画正在进行的，我们在设计时不希望一个页面的动画没做完 下一页就划进来捣乱。所以使用ani变量进行限制
+	var ani = false;
+	$(document).swipeUp(function(){
+		//上滑，然后会记录滑出页和滑入页的序号
+		if(ani){return};
+		lRow=nRow;
+		lCol=nCol;
+		if(lRow!=3){
+			nRow += 1;
+			nCol = 1;
+			pageMove(up);
+		}
+	});
+	$(document).swipeDown(function(){
+		if(ani){return};
+		//下滑，然后会记录滑出页和滑入页的序号
+		lRow=nRow;
+		lCol=nCol;
+		if(lRow!=1){
+			nRow -=1;
+			nCol =1;
+			pageMove(down);
+		}
+	});
+	$(document).swipeLeft(function(){
+		//左滑，然后会记录滑出页和滑入页的序号
+
+		if(ani){return};
+		lRow=nRow;
+		lCol=nCol;
+		if(lRow>1&&lRow<3&&lCol!=3){
+			nCol+=1;
+			nRow=lRow;
+			pageMove(left);
+		}
+	});
+	$(document).swipeRight(function(){
+		//右滑，然后会记录滑出页和滑入页的序号
+
+		if(ani){return};
+		lRow=nRow;
+		lCol=nCol;
+		if(lRow>1&&lRow<3&&lCol!=1){
+			nCol-=1;
+			nRow=lRow;
+			pageMove(right);
+		}
+	});
+
+	//不管上下左右哪个方向的滑动，最终都会进入到这个pageMove函数
+	//参数x是用来记录滑页方向的
+	function pageMove(x){
+		//新声明的prev和next是用来拼接可以使用的类名页码的（即，展示时候提到的page_1_1 page_2_1...）
+		var prev = ".page_"+lRow+"_"+lCol;
+		var next = ".page_"+nRow+"_"+nCol;
+		console.log(prev,next);
+
+		//outClass是专门保存页面滑出的动画类名的  inClass是保存页面滑入的动画类名的
+		var outClass,inClass;
+		//经过参数x的判断，一定能识别出页面向哪个方向滑动，所以根据不同的滑页方向为outclass  inclass添加不同的效果
+		if(x==up){
+			outClass = "pt-page-moveToTop";
+			inClass = "pt-page-moveFromBottom";
+		}
+		if(x==down){
+			outClass = "pt-page-moveToBottom";
+			inClass = "pt-page-moveFromTop";
+		}
+		if(x==left){
+			outClass = "pt-page-moveToLeft";
+			inClass = "pt-page-moveFromRight";
+		}
+		if(x==right){
+			outClass = "pt-page-moveToRight";
+			inClass = "pt-page-moveFromLeft";
+		}
+		//在这个过程中动画是一直进行的我们手动把ani 设置为true作为标识
+//		ani = true;
+		//最后，当动画进行完毕时，滑页也就结束了，然后我们会按照需求为每一页单独设计类名的清除和添加，就如展示时所说的 hide控制隐藏的类啊 current控制当前页的类啊这些
+		$(prev).addClass(outClass);
+		$(next).removeClass("hide");
+		$(next).addClass(inClass);
+		setTimeout(function(){
+			$(prev).removeClass("current")
+			$(prev).removeClass(outClass);
+			$(prev).addClass("hide");
+			$(next).addClass("current");
+			$(next).removeClass(inClass);
+//			ani = false;
+		},600);
+	}
+	</script>
+</body>
+</html>

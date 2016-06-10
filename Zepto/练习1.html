@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="zepto.js"></script>
+</head>
+<body>
+	<div id="nav">
+		<span>0</span>
+		<span>1</span>
+		<span>2</span>
+		<span class="select">3</span>
+		<span>4</span>
+	</div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div id="fuceng">
+		<ul>
+			<li>li 1</li>
+			<li>li 2</li>
+		</ul>
+		<ul>
+			<li>li 3</li>
+			<li>li 4</li>
+		</ul>
+	</div>
+	<script>
+	console.log($('div'))
+	//zepto使用jq中的所有选择器
+	//$('#abc')		$('.abc li')
+
+	$('#nav span').each(function(i){
+		console.log(i)
+		console.log($(this))
+		$(this).attr('index',i);
+		$(this).click(function(){
+			console.log($(this).attr('index'))
+		})		
+	});
+
+	//操作类名
+	$('div').eq(2).addClass('color red acb');
+	$('div').eq(2).removeClass('red')
+	//to
+
+	//DOM操作
+	console.log($('span').index());
+	console.log($('.select').index());
+	//index返回目标元素在兄弟层的位置
+	//console.log($('span').index(4));
+	//index不支持有索引值查
+
+
+	//嵌套结构查节点
+	$('#fuceng li').click(function(){
+		console.log($(this).parent().parent());
+		$(this).remove()
+	})
+
+
+	var json = {'name':'jxy'}
+	//JSON.parse()	//严格模式 'name':'jxy' 都加引号
+	$.ajax({
+		type:'get',
+		url:'',
+		data:'json',
+		dataType:'json',
+		success:function(){
+
+		}
+//		error:function(){
+//
+//		}
+	})
+	</script>
+</body>
+</html>

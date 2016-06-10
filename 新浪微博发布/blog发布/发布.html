@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		body{
+			font-size: 28px;
+		}
+		textarea{
+			width: 600px;
+			height: 200px;
+		}
+		.box{
+			width: 600px;
+			margin: auto;
+		}
+		.top{
+			overflow: hidden;
+		}
+		.tl{
+			float: left;
+		}
+		.tr{
+			float: right;
+		}
+		ul{
+			width: 600px;
+			margin: auto;
+			border: 2px solid black;
+			overflow: hidden;
+		}
+		li{
+			list-style: none;
+			float: left;
+		}
+		.bg{
+			width: 100px;
+			height: 100px;
+			background: url(sunny.jpg);
+			background-size: 100% 100%;
+			border-right: 2px solid black;
+		}
+		.con{
+			width: 496px;
+			position: relative;
+		}
+		.del{
+			width: 60px;
+			height: 36px;
+			background: red;
+			color: white;
+			position: absolute;
+			right: -2px;
+			bottom: -68px;
+		}
+		input{
+			width: 80px;
+			height: 44px;
+			background-color: orange;
+			border: 0px;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<div class="top">
+		<div class="tl">有什么想说的</div>
+		<div class="tr">
+			还可以输入X字
+		</div>
+	</div>
+	<div>
+		<textarea id="txt"></textarea>
+	</div>
+	<div>
+		<input type="button" value="发布">
+	</div>
+</div>
+	<!-- <ul>
+		<li class="bg"></li>
+		<li class="con">
+			案例覅哈斯方丽华说了撒爱妃爱的疯狂
+			<span class="del">删除</span>
+		</li>
+	</ul> -->
+	<script>
+	var ipt = document.getElementsByTagName('input');
+	var txt = document.getElementById('txt');
+	var body = document.getElementsByTagName('body');
+	var oldul = document.getElementsByTagName('ul');
+	ipt[0].onclick = function(){
+		if(txt.value.length==0){
+			alert("内容不能为空");
+		}else{
+			var newul = document.createElement("ul");
+			var newli = document.createElement("li");
+			newli.className = "bg";
+			newul.appendChild(newli);
+
+
+			var newli = document.createElement("li");
+			newli.className = "con";
+			newli.innerHTML = txt.value;
+			newul.appendChild(newli);
+
+			var newspan = document.createElement("span");
+			newspan.className = "del";
+			newspan.innerHTML = "删除"
+			newli.appendChild(newspan);
+
+			console.log(oldul.length);
+			if(oldul.length==0){
+				body[0].appendChild(newul);
+			}else{
+				body[0].insertBefore(newul,oldul[0]);
+			}
+		}
+	var span = document.getElementsByTagName('span');
+	console.log(span);
+	for(var i=0;i<span.length;i++){
+		span[i].index = i;
+		span[i].onclick = function(){
+			body[0].removeChild(this.parentNode.parentNode)
+			// console.log(this.parentNode.parentNode)
+		}
+	}
+	}
+
+
+	</script>
+</body>
+</html>

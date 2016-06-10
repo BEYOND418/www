@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	if (window.XMLHttpRequest) {
+		var ajax = new XMLHttpRequest();
+	}else{
+		var ajax = new ActiveXObject("Micrsoft.XMLHTTP");
+	};
+	ajax.open("GET","test.txt",true);
+	ajax.send(null);
+	ajax.onreadystatechange = function(){
+		if (ajax.readyState==4) {
+			if (ajax.status==200) {
+				console.log(ajax.responseText)
+			}else{
+				alert("xxxx")
+			};
+		};
+	}
+
+	</script>
+</body>
+</html>

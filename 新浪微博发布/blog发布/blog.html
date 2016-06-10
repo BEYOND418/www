@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.blog{
+			margin: 100px auto;
+			width: 700px;
+			/*height: 400px;*/
+			/*border: 1px solid black;*/
+		}
+		.head{
+			width: 700px;
+			height: 60px;
+			overflow: hidden;
+		}
+		.left{
+			float: left;
+		}
+		.right{
+			float: right;
+		}
+		textarea{
+			width: 700px;
+			height: 100px;
+			margin-top: -36px;
+			resize:none;
+			font-size: 20px;
+		}
+		.havetxt{
+			width: 70px;
+			height: 40px;
+			background: #f80;
+			border: 0;
+			float: right;
+			font-size: 20px;
+			color: white;
+			text-align: center;
+			line-height: 40px;
+			cursor: pointer;
+			margin-bottom: 10px;
+		}
+		.notxt{
+			width: 70px;
+			height: 40px;
+			background: gray;
+			border: 0;
+			float: right;
+			font-size: 20px;
+			color: white;
+			text-align: center;
+			line-height: 40px;
+			cursor: pointer;
+			margin-bottom: 10px;
+		}
+		ul{
+			position: relative;
+			overflow: hidden;
+			width: 700px;
+			/*height: 100px;*/
+			border: 1px solid #AdA9A9;
+			margin-bottom: 10px;
+		}
+		li{
+			list-style-type: none;
+			float: left;
+		}
+		.logo{
+			width: 100px;
+			height: 100px;
+			border-right: 1px solid #AdA9A9;
+			background: url(sunny.jpg);
+			background-size: 100%;
+		}
+		.txt{
+			width: 580px;
+			padding-left: 10px;
+			padding-top: 10px;
+			/*height: 100px;*/
+		}
+		.del{
+			float: right;
+			width: 70px;
+			height: 30px;
+			background: red;
+			text-align: center;
+			line-height: 30px;
+			font-size: 20px;
+			color: white;
+			cursor: pointer;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="blog">
+		<div class="head">
+			<div class="left">
+				<p>有什么想对我说的</p>
+			</div>
+			<div class="right">
+				<p id="change">最多还可以输入20字</p>
+			</div>
+		</div>
+		<div class="content">
+			<textarea maxLength="20"></textarea>
+		</div>
+		<div class="bottom">
+			<input type="button" value="发布" class="havetxt">
+		</div>
+	<!-- 	<ul>
+			<li class="logo"></li>
+			<li class="txt">洁柔爱搜if哈市了会计师飞到收大卡妓女肯定是烦恼啥的发链接师范类及阿斯顿飞DFKJ dfaalfjasfkj我
+			</li>
+			<span class="del">删除</span>
+		</ul> -->
+	</div>
+</body>
+<script>
+	var btn = document.getElementsByTagName('input');
+	var txt = document.getElementsByTagName('textarea')[0];
+	var oDiv = document.querySelector(".blog");
+
+	btn[0].onclick = function(){
+		if(txt.value.length==0){
+			alert("内容不能为空");
+		}else{
+			var ul = document.createElement("ul");
+			var li = document.createElement("li");
+			li.className = "logo";
+			ul.appendChild(li);
+
+			var li = document.createElement("li");
+			li.className = "txt";
+			li.innerHTML = txt.value;
+			ul.appendChild(li);
+
+			var span = document.createElement("span");
+			span.className="del";
+			span.innerHTML="删除";
+			ul.appendChild(span);
+
+			var x = document.getElementsByTagName('ul');
+
+			if(x.length>=1){
+				oDiv.insertBefore(ul,x[0])
+			}else{
+				oDiv.appendChild(ul);
+			}
+			txt.value="";
+		}
+		getS();
+	}
+	function getS(){
+		var sp = document.getElementsByTagName('span');
+		for(var i=0;i<sp.length;i++){
+			sp[i].onclick = function(){
+				for(var i=0;i<sp.length;i++){
+					if(this==sp[i]){
+						oDiv.removeChild(this.parentNode);
+					}
+				}
+			}
+		}
+	}
+	var change = document.getElementById('change');
+	function getTxt(){
+		// console.log(txt.value.length);
+		if(txt.value.length==0){
+			btn[0].className = "notxt";
+		}
+		else{
+			btn[0].className = "havetxt";
+			if(txt.value.length>=20){
+				change.innerHTML = "最多还可以输入0字";
+			}else{
+				change.innerHTML = "最多还可以输入"+(20-txt.value.length)+"字";
+			}
+		}
+	}
+	setInterval(getTxt,10);
+</script>
+</html>

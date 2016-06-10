@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	ol,ul{
+		list-style: none;
+	}
+	body{
+		font-family: "Microsoft YaHei"
+	}
+	.box{
+		margin: 60px auto;
+		width: 600px;
+		/*background: #ccc;*/
+	}
+	.box .left{
+		font-weight: 800;
+		letter-spacing: 2px;
+		color: #1c7fc2
+	}
+	.box .right{
+		margin-top: -6px;
+		float: right;
+		font-size: 80%;
+		color: #888;
+	}
+	.right .red{
+		font-family: Constantia, Georgia;
+		font-size: 180%;
+		font-weight: 800;
+	}
+	.edge{
+		margin-top: 5px;
+		overflow: hidden;
+		height: 112px;
+		border: 1px solid #f60;	
+	}
+	.area{
+		padding: 6px;
+		width: 98%;
+		height: 100px;
+		resize: none;
+		outline: none;
+		border: none;
+		background: transparent;
+		font-size: 18px;
+	}
+	.edgeFocus{
+		margin-top: 5px;
+		overflow: hidden;
+		height: 112px;
+		border-color: #ccc;
+		border-width: 1px;
+		border-style: solid;
+		box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.15)inset;
+		background: transparent;
+	}
+	.box .share{
+		float: right;
+		margin-top: 8px;
+		width: 80px;
+		height: 30px;
+		background: #f50;
+		border-radius: 3px;
+		text-align: center;
+		line-height: 30px;
+		color: #fff;
+		opacity: 0.7;
+		box-shadow: 0 1px 0 0 #a6a; 
+		cursor: default;
+	}
+	.claer{
+		height: 50px;
+	}
+	.baleShow{
+		margin-top: 20px;
+		overflow: hidden;
+		width: 95.5%;
+		padding: 12px;
+		border: 1px solid #ccc;
+	}
+	.baleShow li{
+		float: left;
+	}
+	.baleShow .img{
+		margin-right: 12px;
+		width: 80px;
+		height: 80px;
+		background: url("hl.png");
+		border-radius: 6px;
+		box-shadow: 0 1px 2px 0 #999;
+	}
+	.baleShow .time span{
+		font-size: 13px;
+		color: #888;
+	}
+	.baleShow .text{
+		padding: 6px 0 10px;
+		width: 480px;
+		word-wrap: break-word;
+	}
+	.baleShow .dele{
+		float: right;
+		width: 60px;
+		height: 28px;
+		background: #f30;
+		border-radius: 3px;
+		text-align: center;
+		line-height: 28px;
+		color: #fff;
+	}
+	.bale{
+		display: none;
+	}
+	</style>
+</head>
+<body>
+	<div class="box" id="box">
+		<i class="left">有什么新鲜事告诉到家</i>
+		<i class="right">还可以输入<span class="red" id="redNumber">149</span>个字</i>
+		<div class="edgeFocus" id="edge">
+			<textarea name="" id="area" maxlength="140" cols="30" rows="10" class="area"></textarea>
+		</div>
+		<div class="share" id="share">发布</div>
+		<div class="claer"></div>
+		<ul class="bale">
+			<li class="img"></li>
+			<li class="time"></li>
+			<li class="text"></li>
+			<li class="dele">删除</li>
+		</ul>
+	</div>
+	<script>
+	// ↓↓↓输入状态事件的一些效果
+	var area = document.getElementById('area');
+	var box = document.getElementById('box');
+	var share = document.getElementById('share');
+	var edge = document.getElementById('edge');
+	var redNumber = document.getElementById('redNumber');
+	setInterval(check,10)
+	function check(){
+		if (area.value.length>=140) {
+			redNumber.innerHTML = 0;
+		}else{
+			redNumber.innerHTML = 140-area.value.length;
+		};
+		if (area.value!="") {
+			share.style.opacity = "1";
+			share.style.cursor = "pointer";
+		}else{
+			share.style.opacity = ".7";
+			share.style.cursor = "";
+		};
+	}
+	area.onfocus = function(){
+		edge.className = "edge";
+		redNumber.style.color = "#f40";		
+	}
+	area.onblur = function(){
+		edge.className = "edgeFocus";
+		redNumber.style.color = "";
+	}
+
+	// ↓↓↓发布
+	var bale = document.querySelector(".bale");console.log(bale)
+	share.onclick = function(){
+		if (area.value!="") {
+			// ↓↓↓克隆
+			var newul = bale.cloneNode(true);
+			newul.className = "baleShow";
+			var ulLength = box.getElementsByTagName("ul");
+
+			// ↓↓↓向前插
+			if (ulLength.length==1) {
+				box.insertBefore(newul,bale);
+			}else{
+				box.insertBefore(newul,ulLength[0])
+			};
+
+			// ↓↓↓加内容
+			var bales = document.querySelectorAll('.baleShow');
+			var _time = document.querySelector(".time");
+			var _text = document.querySelector(".text")
+			var _area = area.value;
+			var t = new Date();
+			var _t = t.getFullYear()+"/"+(1+t.getMonth())+"/"+t.getDate()+"　"+t.getHours()+":"+t.getMinutes();
+			_time.innerHTML = "BEYOND:　<span>"+_t+"</span>";
+			_text.innerHTML = _area;
+
+			// ↓↓↓点击删除
+			var _dele = document.querySelectorAll(".dele");
+			for (var i = 0; i < _dele.length; i++) {
+				_dele[i].onclick = function(){
+					box.removeChild(this.parentNode)
+				}
+			};
+		}else{alert("亲,输点内容吧 (⊙ˍ⊙)")}
+
+		area.value = ""; //	←←←发布后清空输入框
+	}
+
+	</script>
+</body>
+</html>

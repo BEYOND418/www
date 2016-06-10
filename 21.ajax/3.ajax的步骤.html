@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3.ajax的步骤</title>
+</head>
+<body>
+	<script>
+	// 1.创建一个请求对象
+	if(window.XMLHttpRequest){
+		var ajax = new XMLHttpRequest();
+	}else{
+		var ajax = new ActiveXObject("Micrsoft.XMLHTTP");
+		//只有ie6是这样的
+	}
+	
+
+	//2.拨号 
+	// 参数一表示发送方式 GET/POST
+	// 参数二表示要访问的url
+	// 参数三表示是否发送异步请求
+	// ajax.open("GET","test.txt",true);
+
+	//测试
+	ajax.open("get","json.json",true);
+
+	// GET	  容量小   安全性低   
+	// POST  容量大   相对高很多
+
+	// var data = 123;
+	//3.通话
+	ajax.send(null);
+
+	//4.拨通号码
+	ajax.onreadystatechange = function(){
+		if(ajax.readyState==4){
+			if(ajax.status==200){
+				//5.接受到数据和信息
+				//fn1();
+				console.log(ajax.responseText);
+				alert("ajax申请成功了");
+			}else{
+				//fn2();
+				alert("ajax请求失败了");
+			}
+		}
+	}
+	// ajax.onload = function(){
+	// 	//5.收到对方信息
+	// 	alert()
+	// 	console.log(ajax.responseText);
+	// }
+	</script>
+</body>
+</html>

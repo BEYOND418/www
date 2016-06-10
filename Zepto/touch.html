@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" contern="width=device-width,user-scalable=no">
+	<title>Document</title>
+	<script src="zepto.js"></script>
+	<style>
+	.red{
+		width: 100px;
+		height: 100px;
+		background: red;
+	}
+	.yellow{
+		width: 100px;
+		height: 100px;
+		background: yellow;
+	}
+	</style>
+</head>
+<body>
+	<div class="red">click</div>
+	<div class="yellow">tap</div>
+
+
+
+	<script>
+	$('.red').click(function(){
+		alert('click事件触发')
+	})
+	// $('.yellow').tap(function(){
+	// 	alert('top已触发')
+	// })
+	// $('.yellow').singleTap(function(){
+	// 	alert(singleTap);
+	// })
+	$('.yellow').doubleTap(function(){
+		alert(doubleTap);
+	})
+	// $('.yellow').longTag(function(){
+	// 	alert(longTag);
+	// 	$(this).css('background','#ccc')
+	// })
+	$('.yellow').swipeDown(function(e){
+		e.preventDefault();
+		$(this).css({background:'#ccc'})
+	})
+	// $(":root").css("background-color","yellow");
+	$(document).swipeLeft(function(e){
+		alert()
+		e.preventDefault();
+	})
+	$(document).addEventListner('touchmove',function(e){
+			e.preventDefault();
+	},false)
+	</script>
+</body>
+</html>

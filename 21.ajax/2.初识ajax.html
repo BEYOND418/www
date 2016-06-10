@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2.初识ajax</title>
+	<script src="ajax.js"></script>
+</head>
+<body>
+	<input type="button" value="读取数据">
+	<script>
+	var ipt = document.getElementsByTagName('input');
+	ipt[0].onclick = function(){
+		ajax("json.json",function(data){
+			console.log(data);
+		},function(){
+			alert("读取失败");
+		});
+	}
+	</script>
+</body>
+</html>

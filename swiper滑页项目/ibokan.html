@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="swiper.min.css">
+
+    <!-- Demo styles -->
+    <style>
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body{
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    } 
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        overflow: hidden;
+        /*text-align: center;*/
+        /*font-size: 18px;*/
+        /*background: #fff;*/
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .one{
+        position: relative;
+        background: url(img/1-bg.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+    .two{
+    	position: relative;
+        background: url(img/bj-2.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .thr{
+        background: url(img/page3.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+    .fou{
+    	position: relative;
+        background: url(img/bj-4.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .fif{
+    	position: relative;
+        background:url(img/9-bg.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+    .six{
+    	position: relative;
+        background:url(img/9-bg.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+    .sev{
+    	position: relative;
+        background:url(img/9-bg.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+    .eig{
+    	position: relative;
+        background:url(img/9-bg.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+    .nin{
+    	position: relative;
+        background:url(img/9-bg.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+    .ten{
+    	position: relative;
+        background:url(img/9-bg.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+    .evn{
+    	position: relative;
+    	overflow: hidden;
+        background:url(img/9-bg.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+    .twl{
+    	position: relative;
+        background:url(img/page11.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+    .thn{
+    	position: relative;
+        background:url(img/9-bg.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+    .arrow{
+        position: absolute;
+        top: 84%;
+        left: 50%;
+        margin-left: -25px;
+        opacity: 0.8;
+        -webkit-animation:arrow 2s ease infinite;
+    }
+    @-webkit-keyframes arrow{
+        0%{top: 85%;opacity: 0;}
+        50%{opacity: 0.7;}
+        100%{top:80%;opacity: 0;}
+    }
+    #cut1{
+        position: absolute;
+        top: -10%;
+        left: 50%;
+        width: 76%;
+        height: 5%;
+        margin-left: -38%;
+    }
+    @-webkit-keyframes cut1{
+        0%{top: -10%;}
+		40%{top:-10%;}
+        100%{top:30%;}
+    }
+    #cut2{
+        position: absolute;
+        top: -10%;
+        left: 50%;
+        width: 70%;
+        height: 10%;
+        margin-left: -35%;
+    }
+       @-webkit-keyframes cut2{
+        0%{top: -10%;}
+        100%{top:14%;}
+    }
+    #swt1{
+    	position: absolute;
+    	top: -20%;
+    	left: 50%;
+    	width: 86%;
+    	height: 16%;
+    	margin-left: -43%;
+    }
+    	@-webkit-keyframes swt1{
+        0%{top: -20%;}
+        100%{top:14%;}
+    }
+    #swt2{
+    	position: absolute;
+    	top: -20%;
+    	left: 50%;
+    	width: 86%;
+    	height: 16%;
+    	margin-left: -43%;
+    }
+    	@-webkit-keyframes swt2{
+        0%{top: -20%;}
+        75%{top:-20%;}
+        100%{top:14%;}
+    }
+    #sixbox{
+    	font-size: 16px;
+    	text-align: center;
+    	line-height: 44px;
+    	color: white;
+    }
+    @-webkit-keyframes sixr{
+    	50%{rotate:0deg;}
+    	100%{rotate:360deg;}
+    }
+    .pur{
+    	position: absolute;
+    	bottom:-24%;
+    	left: 14%;
+    	width:70px;
+		height:40px;
+		background:#655fa1;
+		margin:200px auto;
+		opacity: 0;
+    }
+    @-webkit-keyframes six1{
+        37.5%{bottom:-24%;opacity: 0;}
+        50%{bottom:-19%;opacity: 1;-webkit-transform:rotate(0deg);}
+        75%{bottom:-19%;opacity: 1;-webkit-transform:rotate(360deg);}
+        100%{bottom:-19%;opacity: 1;-webkit-transform:rotate(360deg);}
+    }
+	.pur:before{
+		content:"";
+		display:block;
+		position: absolute;
+		top: -55px;
+		left: 0px;
+		width:0;
+		height:0;
+		border:35px solid transparent;
+		border-bottom:20px solid #655fa1;
+	}
+	.pur:after{
+		content:"";
+		display:block;
+		position: absolute;
+		top: 40px;
+		left: 0px;
+		width:0;
+		height:0;
+		border:35px solid transparent;
+		border-top:20px solid #655fa1;
+	}
+	.yel{
+    	position: absolute;
+    	bottom:-10%;
+    	left: 26%;
+    	width:70px;
+		height:40px;
+		background:#ffb400;
+		margin:200px auto;
+		opacity: 0;
+
+    }
+    @-webkit-keyframes six2{
+		37.5%{bottom:-10%;opacity: 0;}
+        55%{bottom:-5%;opacity: 1;-webkit-transform:rotate(0deg);}
+        80%{bottom:-5%;opacity: 1;-webkit-transform:rotate(360deg);}
+        100%{bottom:-5%;opacity: 1;-webkit-transform:rotate(360deg);}
+    }
+	.yel:before{
+		content:"";
+		display:block;
+		position: absolute;
+		top: -55px;
+		left: 0px;
+		width:0;
+		height:0;
+		border:35px solid transparent;
+		border-bottom:20px solid #ffb400;
+	}
+	.yel:after{
+		content:"";
+		display:block;
+		position: absolute;
+		top: 40px;
+		left: 0px;
+		width:0;
+		height:0;
+		border:35px solid transparent;
+		border-top:20px solid #ffb400;
+	}
+	.red{
+    	position: absolute;
+    	bottom:-10%;
+    	left: 50%;
+    	width:70px;
+		height:40px;
+		background:#fa6249;
+		margin:200px auto;
+		opacity: 0;
+    }
+    @-webkit-keyframes six4{
+		37.5%{bottom:-10%;opacity: 0;}
+        65%{bottom:-5%;opacity: 1;-webkit-transform:rotate(0deg);}
+        90%{bottom:-5%;opacity: 1;-webkit-transform:rotate(360deg);}
+        100%{bottom:-5%;opacity: 1;-webkit-transform:rotate(360deg);}
+    }
+	.red:before{
+		content:"";
+		display:block;
+		position: absolute;
+		top: -55px;
+		left: 0px;
+		width:0;
+		height:0;
+		border:35px solid transparent;
+		border-bottom:20px solid #fa6249;
+	}
+	.red:after{
+		content:"";
+		display:block;
+		position: absolute;
+		top: 40px;
+		left: 0px;
+		width:0;
+		height:0;
+		border:35px solid transparent;
+		border-top:20px solid #fa6249;
+	}
+	.blu{
+    	position: absolute;
+    	bottom:-24%;
+    	left: 38%;
+    	width:70px;
+		height:40px;
+		background:#0089e0;
+		margin:200px auto;
+		opacity: 0;
+    }
+    @-webkit-keyframes six3{
+        37.5%{bottom:-24%;opacity: 0;}
+        60%{bottom:-19%;opacity: 1;-webkit-transform:rotate(0deg);}
+        85%{bottom:-19%;opacity: 1;-webkit-transform:rotate(360deg);}
+        100%{bottom:-19%;opacity: 1;-webkit-transform:rotate(360deg);}
+    }
+	.blu:before{
+		content:"";
+		display:block;
+		position: absolute;
+		top: -55px;
+		left: 0px;
+		width:0;
+		height:0;
+		border:35px solid transparent;
+		border-bottom:20px solid #0089e0;
+	}
+	.blu:after{
+		content:"";
+		display:block;
+		position: absolute;
+		top: 40px;
+		left: 0px;
+		width:0;
+		height:0;
+		border:35px solid transparent;
+		border-top:20px solid #0089e0;
+	}
+	.dev{
+    	position: absolute;
+    	bottom:-24%;
+    	left: 62%;
+    	width:70px;
+		height:40px;
+		background:#182d57;
+		margin:200px auto;
+		opacity: 0;
+    }
+    @-webkit-keyframes six5{
+        37.5%{bottom:-24%;opacity: 0;}
+        70%{bottom:-19%;opacity: 1;-webkit-transform:rotate(0deg);}
+        95%{bottom:-19%;opacity: 1;-webkit-transform:rotate(360deg);}
+        100%{bottom:-19%;opacity: 1;-webkit-transform:rotate(360deg);}
+    }
+	.dev:before{
+		content:"";
+		display:block;
+		position: absolute;
+		top: -55px;
+		left: 0px;
+		width:0;
+		height:0;
+		border:35px solid transparent;
+		border-bottom:20px solid #182d57;
+	}
+	.dev:after{
+		content:"";
+		display:block;
+		position: absolute;
+		top: 40px;
+		left: 0px;
+		width:0;
+		height:0;
+		border:35px solid transparent;
+		border-top:20px solid #182d57;
+	}
+	#swfou{
+    	position: absolute;
+    	top: 36%;
+    	left: 17%;
+    	width:200px;
+		height:200px;
+    }
+    #swfdiv{
+    	position: absolute;
+    	top: 0%;
+    	left: 12%;
+    	width: 300px;
+    	height: 60px;
+    	font-size: 24px;
+    	color: white;
+    	opacity: 0;
+    }
+    @-webkit-keyframes swfdiv{
+    	0%{top:0%;opacity: 0;}
+    	100%{top: 10%;opacity: 1;}
+    }
+    @-webkit-keyframes four{
+    	0%{-webkit-transform:scale(1,1);}
+    	25%{-webkit-transform:scale(1.4,0.6);}
+    	50%{-webkit-transform:scale(0.8,1.2);}
+    	75%{-webkit-transform:scale(1.2,0.8);}
+		100%{-webkit-transform:scale(1,1);}
+    }
+    #swfro{
+    	position: absolute;
+    	top: 0%;
+    	left: 30%;
+    	width: 120px;
+    	height: 197px;
+    }
+    #swfidiv{
+    	position: absolute;
+    	bottom: 0%;
+    	left: 5%;
+    	width: 90%;
+    	height: 30%;
+    	font-size: 13px;
+    	color: white;
+    	opacity: 0;
+    }
+    @-webkit-keyframes swfidiv{
+    	0%{bottom: 3%;opacity: 0;}
+    	100%{bottom:8%;opacity: 1;}
+    }
+    @-webkit-keyframes swfro{
+    	0%{-webkit-transform:rotateY(0deg) scale(1);}
+    	49%{-webkit-transform:rotateY(180deg) scale(2);}
+    	51%{-webkit-transform:rotateY(180deg) scale(2);}
+    	100%{-webkit-transform:rotateY(360deg) scale(1);}
+    }
+    #sixro{
+    	position: absolute;
+    	top: 0%;
+    	left: 30%;
+    	width: 120px;
+    	height: 197px;
+    }
+    #sixdiv{
+    	position: absolute;
+    	bottom: 0%;
+    	left: 5%;
+    	width: 90%;
+    	height: 30%;
+    	font-size: 13px;
+    	color: white;
+    	opacity: 0;
+    }
+    #sevro{
+    	position: absolute;
+    	top: 0%;
+    	left: 30%;
+    	width: 120px;
+    	height: 197px;
+    }
+    #sevdiv{
+    	position: absolute;
+    	bottom: 0%;
+    	left: 5%;
+    	width: 90%;
+    	height: 30%;
+    	font-size: 13px;
+    	color: white;
+    	opacity: 0;
+    }
+    #eigro{
+    	position: absolute;
+    	top: 0%;
+    	left: 30%;
+    	width: 120px;
+    	height: 197px;
+    }
+    #eigdiv{
+    	position: absolute;
+    	bottom: 0%;
+    	left: 5%;
+    	width: 90%;
+    	height: 30%;
+    	font-size: 13px;
+    	color: white;
+    	opacity: 0;
+    }
+    #coo{
+    	position: absolute;
+    	top: 0;
+    	left: -100%;
+    	width: 100%;
+    	height:14%;
+    }
+    @-webkit-keyframes coo{
+    	0%{left:-100%;}
+    	60%{left:0%;}
+    	80%{left:-10%;}
+    	85%{left:-10%;}
+    	100%{left:0%;}
+    }
+    #show{
+    	position: absolute;
+    	top: 14%;
+    	left: 0%;
+    }
+    #show img{
+    	width: 30%;
+    	height: 30%;
+    	margin-left: 14%;
+    	margin-right: -4%;
+    	opacity: 0;
+    }
+    @-webkit-keyframes nini{
+    	0%{opacity: 0;-webkit-transform:rotateY(-40deg);}
+    	40%{opacity: 0.2;-webkit-transform:rotateY(40deg);}
+    	80%{opacity: 0.4;-webkit-transform:rotateY(-20deg);}
+    	100%{opacity: 1;-webkit-transform:rotateY(0deg);}
+    }
+    #tentxt1{
+    	position: absolute;
+    	top: 0%;
+    	left: 5%;
+    	width: 30%;
+    	height: 30%;
+    	font-size: 24px;
+    	color: white;
+    	opacity: 0;
+    }
+    @-webkit-keyframes ttxt1{
+    	0%{opacity: 0;top: 0%;}
+    	100%{opacity: 1;top: 10%;}
+    }
+    #tentxt2{
+    	position: absolute;
+    	top: 0%;
+    	left: 5%;
+    	width: 90%;
+    	height: 30%;
+    	font-size: 13px;
+    	color: white;
+    	opacity: 0;
+    }
+     @-webkit-keyframes ttxt2{
+    	0%{opacity: 0;top: 0%;}
+    	100%{opacity: 1;top: 20%;}
+    }
+    #qyhz{
+    	position: absolute;
+    	top: 100%;
+    	left: 5%;
+    	width: 90%;
+    	height: 30%;
+    }
+    @-webkit-keyframes qyhz{
+    	0%{top: 100%;}
+    	100%{top: 46%;}
+    }
+    #school{
+    	position: absolute;
+    	top: 0;
+    	left: -100%;
+    	width: 100%;
+    	height:14%;
+    }
+    #showerL{
+    	float: left;
+    }
+    #showerL img{
+    	width: 40%;
+    	height: 15%;
+    	position: absolute;
+    	left: -40%;
+    	opacity: 0;
+    }
+    @-webkit-keyframes showl{
+    	0%{left:-40%; opacity: 0;}
+    	100%{left:10%;opacity: 1;}
+    }
+    #showerR{
+    	float: left;
+    }
+    #showerR img{
+    	width: 40%;
+    	height: 15%;
+    	position: absolute;
+    	left: 100%;
+    }
+    @-webkit-keyframes showr{
+    	10%{left:100%; opacity: 0;}
+    	100%{left:52%;opacity: 1;}
+    }
+    #twlsk{
+    	position: absolute;
+    	left: 10%;
+    	width: 80%;
+    	height: 6%;
+    	opacity: 0;
+    }
+    @-webkit-keyframes twlsk{
+    	0%{opacity: 0;}
+		20%{opacity: 1;-webkit-transform:skew(0deg);}
+    	40%{opacity: 1;-webkit-transform:skew(10deg);}
+    	60%{opacity: 1;-webkit-transform:skew(0deg);}
+    	80%{opacity: 1;-webkit-transform:skew(-10deg);}
+    	100%{opacity: 1;-webkit-transform:skew(0deg);}
+    }
+    #tm{
+    	position: absolute;
+    	top: 10%;
+    	left: 100%;
+    	width: 70%;
+    	height: 8%;
+    }
+    @-webkit-keyframes tm{
+    	0%{left: 100%;-webkit-transform:skew(20deg);}
+    	70%{left: 12%;-webkit-transform:skew(20deg);}
+    	80%{left: 12%;-webkit-transform:skew(-20deg);}
+    	90%{left: 12%;-webkit-transform:skew(10deg);}
+    	100%{left: 12%;-webkit-transform:skew(0deg);}
+    }
+    #we{
+    	position: absolute;
+    	top: -50%;
+    	left: 5%;
+    	width: 70%;
+    	height: 40%;
+    }
+    @-webkit-keyframes we{
+    	0%{top:-50%;}
+    	100%{top: 44%;}
+    }
+    @-webkit-keyframes tel{
+    	0%{opacity: 0;-webkit-transform:scale(1);}
+    	25%{opacity: 0.4;-webkit-transform:scale(1.4);}
+    	50%{opacity: 0.6;-webkit-transform:scale(0.8);}
+    	75%{opacity: 0.8;-webkit-transform:scale(1.2);}
+    	100%{opacity: 1;-webkit-transform:scale(1);}
+    }
+    #tel{
+    	position: absolute;
+    	top: 17%;
+    	left: 9%;
+    	width: 80%;
+    	font-size: 12px;
+    	color: white;
+    	opacity: 0;
+    }
+    #tel p{
+    	margin-bottom: -3%;
+    }
+    #obs{
+    	position: absolute;
+    	top: -20%;
+    	left: 5%;
+    	width: 80%;
+    	font-size: 24px;
+    	color: white;
+    }
+    @-webkit-keyframes obs{
+    	0%{top: -20%;}
+    	100%{top:38%;}
+    }
+    </style>
+</head>
+<body>
+    <!-- <audio id="myaudio" src="booty music.mp3" loop="loop" autoplay="autoplay"></audio> -->
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="swiper-slide one">
+                <img id="cut2" src="img/1-2.png" alt="">
+                <img id="cut1" src="img/1-1.png" alt="">
+                <img class="arrow"src="img/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-slide two">
+                <img id="swt1" src="img/2-1.png" alt="">
+                <img id="swt2" src="img/2-2.png" alt="">
+                <div id="sixbox">
+                	<div class="pur">解决方案</div>
+                	<div class="yel">培训</div>
+                	<div class="blu">外包服务</div>
+                	<div class="red">IT咨询</div>
+                	<div class="dev">产品研发</div>
+                </div>
+                <img class="arrow"src="img/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-slide thr">
+                <img class="arrow"src="img/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-slide fou">
+                <div id="swfdiv" class="foutxt">产学研创高效教育模式</div>
+                <img id="swfou"src="img/page4i.png" alt="">
+                <img class="arrow"src="img/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-slide fif">
+                <div id="swfidiv">博看文思的客户遍布全球，研发项目涉及电子商务、IT服务、P2P、SNS、大数据、智能硬件、可穿戴设备、云计算等各行各业，博看文思自主研发的APP产品被多次评为“精品应用”。博看文思的项目成果不仅极大地满足了客户的需求，并且强有力地推动了移动互联网行业的发展。</div>
+                <img id="swfro" src="img/page5i.png" alt="">
+                <img class="arrow"src="img/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-slide six">
+                <div id="sixdiv">博看文思团队由中、美300余位专家组成，拥有国内先进的自主知识产权的游戏物理引擎、3D引擎和手机跨平台开发框架，与包括世界500强在内的多家企业进行项目外包、技术解决方案等综合服务。</div>
+                <img id="sixro" src="img/page6i.png" alt="">
+                <img class="arrow"src="img/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-slide sev">
+                <div id="sevdiv">博看文思专注于移动互联网高端人才培养，课程涵盖了IOS、HTML5、ANDROID应用领域，先后在北京，广州，厦门，西安等地建立实训中心，累计为企业输送了6万名高级移动开发人才。</div>
+                <img src="img/page7i.png" alt="" id="sevro">
+                <img class="arrow"src="img/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-slide eig">
+                <div id="eigdiv">作为国家自主创新示范区常青藤创业园所在地，博看文思用成熟的产品策划、构架、开发、上线等流程，鼓励大学生自主创业，博看提供创业初期最缺乏的项目（不低于5000美金），博看文思与创业团队全方位合作，共同研发，推广产品。</div>
+                <img src="img/page8i.png" alt="" id="eigro">
+                <img class="arrow"src="img/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-slide nin">
+                <img src="img/8-1.png" alt="" id="coo">
+                <div id="show">
+                	<img src="img/81.png" alt="">
+		            <img src="img/82.png" alt="">
+		            <img src="img/83.png" alt="">
+		            <img src="img/84.png" alt="">
+		            <img src="img/85.png" alt="">
+		            <img src="img/86.png" alt="">
+                </div>
+                <img class="arrow"src="img/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-slide ten">
+                <div id="tentxt1">合作企业</div>
+                <div id="tentxt2">战略联盟与合作伙伴关系是博看文思也无持续发展的重要保证，博看文思已经与行业领导者建立了战略合作伙伴关系，紧密的合作伙伴关系，确保博看文思能够满足客户的各种需求，并为客户提供最优秀的解决方案。</div>
+                <img src="img/qyhz.png" alt="" id="qyhz">
+                <img class="arrow"src="img/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-slide evn">
+                <img src="img/10-1.png" alt="" id="school">
+                <div id="showerL">
+                	<img src="img/101.jpg" alt="">
+                	<img src="img/103.jpg" alt="">
+                	<img src="img/105.jpg" alt="">
+                	<img src="img/107.jpg" alt="">
+                </div>
+                <div id="showerR">
+                	<img src="img/102.jpg" alt="">
+					<img src="img/104.jpg" alt="">
+					<img src="img/106.jpg" alt="">
+					<img src="img/108.jpg" alt="">
+                </div>
+                c
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-slide twl" id="twl">
+                <img id="twlsk" src="img/11_02.png" alt="">
+                <img id="twlsk" src="img/11_03.png" alt="">
+                <img id="twlsk" src="img/11_04.png" alt="">
+                <img id="twlsk" src="img/11_05.png" alt="">
+                <img id="twlsk" src="img/11_06.png" alt="">
+                <img id="twlsk" src="img/11_07.png" alt="">
+                <img id="twlsk" src="img/11_08.png" alt="">
+                <img id="twlsk" src="img/11_09.png" alt="">
+                <img id="twlsk" src="img/11_10.png" alt="">
+                <img class="arrow"src="img/arrow.png" alt="">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-slide thn">
+                <div id="tel">
+                	<p>电话: 4006~333~486</p>
+                	<p>Email:4006333@qq.com</p>
+                	<p>地址:北京石景山区总工会博看文思</p>
+                </div>
+                <div id="obs">关注我们，扫一扫</div>
+                <img id="tm" src="img/p12t.png" alt="">
+                <img id="we" src="img/p12e.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        // pagination: '.swiper-pagination',
+        // paginationClickable: true,
+        direction: 'vertical',
+     onInit:function(swiper){
+   		var cut1 = document.getElementById('cut1');
+ 		var cut2 = document.getElementById('cut2');
+ 		cut2.style.webkitAnimation = "cut2 0.6s linear";
+ 		cut2.style.webkitAnimationFillMode = "forwards";
+ 		cut1.style.webkitAnimation = "cut1 1.8s linear";
+ 		cut1.style.webkitAnimationFillMode = "forwards";
+		},
+    	onSlideChangeEnd:function(swiper){
+    		var cut1 = document.getElementById('cut1');
+    		var cut2 = document.getElementById('cut2');
+    		var sixb = document.getElementById('sixbox').getElementsByTagName('div');
+    		var swfou = document.getElementById('swfou');
+    		var swfdiv = document.getElementById('swfdiv');
+    		var swfro = document.getElementById('swfro');
+    		var swfidiv = document.getElementById('swfidiv');
+    		var sixro = document.getElementById('sixro');
+    		var sixdiv = document.getElementById('sixdiv');
+    		var sevro = document.getElementById('sevro');
+    		var sevdiv = document.getElementById('sevdiv');
+    		var eigro = document.getElementById('eigro');
+    		var eigdiv = document.getElementById('eigdiv');
+    		var coo = document.getElementById('coo');
+    		var ninimg = document.getElementById('show').getElementsByTagName('img');
+    		var ttxt1 = document.getElementById('tentxt1');
+    		var ttxt2 = document.getElementById('tentxt2');
+    		var qyhz = document.getElementById('qyhz');
+    		var school = document.getElementById('school');
+    		var showL = document.getElementById('showerL').getElementsByTagName('img');
+    		var showR = document.getElementById('showerR').getElementsByTagName('img');
+    		var twl = document.getElementById('twl').getElementsByTagName('img');
+    		var tm = document.getElementById('tm');
+    		var we =document.getElementById('we');
+    		var tel = document.getElementById('tel');
+	    	if(swiper.activeIndex==0){
+	    		cut2.style.webkitAnimation = "cut2 0.6s linear";
+	    		cut2.style.webkitAnimationFillMode = "forwards";
+	    		cut1.style.webkitAnimation = "cut1 1.8s linear";
+	    		cut1.style.webkitAnimationFillMode = "forwards";
+	    	}
+	    	else{
+	  			cut1.style.webkitAnimation = "";
+	    		cut2.style.webkitAnimation = "";
+	    	}
+	    	if(swiper.activeIndex==1){
+	    		swt1.style.webkitAnimation = "swt1 0.6s linear";
+	    		swt1.style.webkitAnimationFillMode = "forwards";
+	    		swt2.style.webkitAnimation = "swt2 2s linear";
+	    		swt2.style.webkitAnimationFillMode = "forwards";
+	    		sixb[1].style.webkitAnimation = "six2 4s ease";
+	    		sixb[3].style.webkitAnimation = "six4 4s ease";
+	    		sixb[1].style.webkitAnimationFillMode = "forwards";
+	    		sixb[3].style.webkitAnimationFillMode = "forwards";
+	    		sixb[0].style.webkitAnimation = "six1 4s ease";
+	    		sixb[0].style.webkitAnimationFillMode = "forwards";
+	    		sixb[2].style.webkitAnimation = "six3 4s ease";
+	    		sixb[2].style.webkitAnimationFillMode = "forwards";
+	    		sixb[4].style.webkitAnimation = "six5 4s ease";
+	    		sixb[4].style.webkitAnimationFillMode = "forwards";
+	    	}
+	    	else{
+	    		swt1.style.webkitAnimation = "";
+	    		swt2.style.webkitAnimation = "";
+	    		sixb[1].style.webkitAnimation = "";
+	    		sixb[3].style.webkitAnimation = "";
+	    		sixb[0].style.webkitAnimation = "";
+	    		sixb[2].style.webkitAnimation = "";
+	    		sixb[4].style.webkitAnimation = "";
+	    	}
+	    	if(swiper.activeIndex==3){
+	    		swfou.style.webkitAnimation = "four 0.5s linear 1s";
+	    		swfdiv.style.webkitAnimation = "swfdiv 1s ease";
+	    		swfdiv.style.webkitAnimationFillMode = "forwards";
+	    	}
+	    	else{
+	    		swfou.style.webkitAnimation = "";
+	    		swfdiv.style.webkitAnimation = "";
+	    	}
+	    	if(swiper.activeIndex==4){
+	    		swfidiv.style.webkitAnimation = "swfidiv 0.5s linear 1s";
+	    		swfidiv.style.webkitAnimationFillMode = "forwards";
+	    		swfro.style.webkitAnimation = "swfro 2s ease";
+	    		swfro.style.webkitAnimationFillMode = "forwards";
+	    	}
+	    	else{
+	    		swfidiv.style.webkitAnimation = "";
+	    		swfro.style.webkitAnimation = "";
+	    	}
+	    	if(swiper.activeIndex==5){
+	    		sixdiv.style.webkitAnimation = "swfidiv 0.5s linear 1s";
+	    		sixdiv.style.webkitAnimationFillMode = "forwards";
+	    		sixro.style.webkitAnimation = "swfro 2s ease";
+	    		sixro.style.webkitAnimationFillMode = "forwards";
+	    	}
+	    	else{
+	    		sixdiv.style.webkitAnimation = "";
+	    		sixro.style.webkitAnimation = "";
+	    	}
+	    	if(swiper.activeIndex==6){
+	    		sevdiv.style.webkitAnimation = "swfidiv 0.5s linear 1s";
+	    		sevdiv.style.webkitAnimationFillMode = "forwards";
+	    		sevro.style.webkitAnimation = "swfro 2s ease";
+	    		sevro.style.webkitAnimationFillMode = "forwards";
+	    	}
+	    	else{
+	    		sevdiv.style.webkitAnimation = "";
+	    		sevro.style.webkitAnimation = "";
+	    	}
+	    	if(swiper.activeIndex==7){
+	    		eigdiv.style.webkitAnimation = "swfidiv 0.5s linear 1s";
+	    		eigdiv.style.webkitAnimationFillMode = "forwards";
+	    		eigro.style.webkitAnimation = "swfro 2s ease";
+	    		eigro.style.webkitAnimationFillMode = "forwards";
+	    	}
+	    	else{
+	    		eigdiv.style.webkitAnimation = "";
+	    		eigro.style.webkitAnimation = "";
+	    	}
+	    	if(swiper.activeIndex==8){
+	    		coo.style.webkitAnimation = "coo 1s ease-in-out";
+	    		coo.style.webkitAnimationFillMode = "forwards";
+	    		for(var i=0;i<6;i++){
+	    			ninimg[i].style.webkitAnimation = "nini 1s ease "+i*0.3+"s";
+	    			ninimg[i].style.webkitAnimationFillMode = "forwards";
+	    		}
+	    	}else{
+	    		coo.style.webkitAnimation = "";
+	    		for(var i=0;i<6;i++){
+	    			ninimg[i].style.webkitAnimation = "";
+	    		}    		
+	    	}
+	    	if(swiper.activeIndex==9){
+	    		ttxt1.style.webkitAnimation = "ttxt1 1s ease";
+	    		ttxt1.style.webkitAnimationFillMode = "forwards";
+	    		ttxt2.style.webkitAnimation = "ttxt2 1s ease 1s";
+	    		ttxt2.style.webkitAnimationFillMode = "forwards";
+	    		qyhz.style.webkitAnimation = "qyhz 1s ease 2s";
+	    		qyhz.style.webkitAnimationFillMode = "forwards";
+	    	}else{
+	    		ttxt1.style.webkitAnimation = "";
+	    		ttxt2.style.webkitAnimation = "";
+	    		qyhz.style.webkitAnimation = "";
+	    	}
+	    	if(swiper.activeIndex==10){
+	    		school.style.webkitAnimation = "coo 1s ease-in-out";
+	    		school.style.webkitAnimationFillMode = "forwards";
+	    		showL[0].style.top = '14%';
+	    		showL[1].style.top = '30%';
+	    		showL[2].style.top = '46%';
+	    		showL[3].style.top = '62%';
+	    		showR[0].style.top = '14%';
+	    		showR[1].style.top = '30%';
+	    		showR[2].style.top = '46%';
+	    		showR[3].style.top = '62%';
+	    		for(var i=0;i<4;i++){
+	    			showL[i].style.webkitAnimation = "showl 1s ease "+i*0.5+"s";
+	    			showL[i].style.webkitAnimationFillMode = "forwards";
+	    			showR[i].style.webkitAnimation = "showr 1.5s ease "+i*0.5+"s";
+	    			showR[i].style.webkitAnimationFillMode = "forwards";
+	    		}
+	    	}
+	    	else{
+	    		school.style.webkitAnimation = "";
+	    		for(var i=0;i<4;i++){
+	    			showL[i].style.webkitAnimation = "";
+	    			showR[i].style.webkitAnimation = "";
+	    		}    	
+	    	}
+	    	if(swiper.activeIndex==11){
+	    			twl[0].style.top = '20%';
+	    			twl[1].style.top = '25%';
+	    			twl[2].style.top = '30%';
+	    			twl[3].style.top = '35%';
+	    			twl[4].style.top = '40%';
+	    			twl[5].style.top = '45%';
+	    			twl[6].style.top = '50%';
+	    			twl[7].style.top = '55%';
+	    			twl[8].style.top = '60%';
+	    		for(var i=0;i<=8;i++){
+	    			twlsk[i].style.webkitAnimation = "twlsk 0.5s ease "+i*0.3+"s";
+	    			twlsk[i].style.webkitAnimationFillMode = "forwards";
+	    		}
+	    	}else{
+	    		for(var i=0;i<=8;i++){
+	    			twlsk[i].style.webkitAnimation = "";
+	    		}
+	    	}
+	    	if(swiper.activeIndex==12){
+	    		tm.style.webkitAnimation = "tm 1s ease-in";
+	    		tm.style.webkitAnimationFillMode = "forwards";
+	    		tel.style.webkitAnimation = "tel 1.5s ease 1s" ;
+	    		tel.style.webkitAnimationFillMode = "forwards";
+	    		obs.style.webkitAnimation = "obs 1s ease 2.5s";
+	    		obs.style.webkitAnimationFillMode = "forwards";
+	    		we.style.webkitAnimation = "we 1s ease 3.5s";
+	    		we.style.webkitAnimationFillMode = "forwards";
+	    	}else{
+	    		tm.style.webkitAnimation = "";
+	    		tel.style.webkitAnimation = "";
+	    		obs.style.webkitAnimation = "";
+	    		we.style.webkitAnimation = "";
+	    	}
+   		}
+    });
+    var myaudio = document.getElementById("myaudio");
+    // window.ontouchstart = function(){
+   	// 	myaudio.play();
+    // }
+    </script>
+</body>
+</html>

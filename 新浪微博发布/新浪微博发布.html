@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	html{
+		font-family: "微软雅黑";
+	}
+	ul{
+		list-style: none;
+	}
+	body{
+		height: 3000px;
+	}
+	.box{
+		margin: 30px auto 0;
+		width: 600px;
+		height: 68px;
+	}
+	.spac1{
+		float: left;
+	}
+	.spac2{
+		float: right;
+	}
+	.area{
+		padding: 6px;
+		margin-top: 10px;
+		width: 98%;
+		max-width: 98%;
+		height: 96px;
+	}
+	.show,.del{
+		float: right;
+		margin-top: 10px;
+		width: 56px;
+		height: 22px;
+		background: #555;
+		border-radius: 3px;
+		font-size: 14px;
+		color: #fff;
+		text-align: center;
+		line-height: 22px;
+		cursor: pointer;
+	}
+	.show{
+		margin-right: 5px;
+	}
+	.del{
+		background: red;
+	}
+	.note{
+		float: left;
+		margin-top: 20px;
+		padding: 6px;
+		overflow: hidden;
+		width: 98%;
+		border: 1px solid #999;
+	}
+	.photo{
+		float: left;
+		margin-right: 10px;
+		width: 58px;
+		height: 58px;
+		background: url(1.jpg);
+		background-size: 100% 100%;
+		border-radius: 6px;
+	}
+	.time{
+		float: left;
+		margin-top: 6px;
+		font-size: 12px;
+		color: #777;
+	}
+	.text{
+		float: left;
+		margin-top: 10px;
+		width: 88%;
+		font-size: 12px;
+		word-wrap:break-word;
+	}
+	
+	</style>
+</head>
+<body>
+	<div class="box" id="box">
+		<em class="spac1">有什么新鲜事想告诉大家？</em>
+		<em class="spac2">还可以输入<em id="count">140</em>个字</em>
+		<textarea class="area" id="area" maxlength="140"></textarea>
+		<div class="show" id="show">发布</div>
+		<!-- <ul class="note">
+			<li class="photo"></li>
+			<li class="time">2016.04.18</li>
+			<li class="text">对方水电费对方水电费对方水电费对方水电</li>
+			<li class="del">删除</li>
+		</ul> -->
+	</div>
+<script>
+	var box = document.getElementById('box');
+	var area = document.getElementById('area');
+	var show = document.getElementById('show');
+	var count= document.getElementById('count');
+	setInterval(move,1);
+	function move(){
+		if (area.value.length!=0) {
+				show.style.background = "#FF8239";
+				// ↓↓↓还可以输入的字符数量
+				var cont = area.value; 
+				var s = count.innerText;
+				// console.log(s);
+				count.innerText = 140-area.value.length;
+				if (area.value.length>129) {
+					count.style.color = "red";
+					if (area.value.length>140) {
+						area.value.length = 140;
+					}
+				}else{
+					count.style.color = "#333";
+				};
+		}else{
+				show.style.background = "#555"; 
+		}   
+		show.onclick = function(){			
+			if (area.value.length!=0) {
+				// ↓↓↓发表时间            
+				var t = new Date();
+				var year = t.getFullYear();
+				var Mon = 1+t.getMonth();
+				var Dat = t.getDate();
+				var h = t.getHours();
+				var m = t.getMinutes();
+				var s = t.getSeconds();		
+
+				var uls = document.getElementsByTagName('ul');  console.log(uls)
+				var newul= document.createElement("ul");
+				newul.className = "note";
+				if (uls.length==0) {
+					box.appendChild(newul);
+				}else{				
+					box.insertBefore(newul,uls[0]);
+				}
+				
+
+				var newphoto = document.createElement("li");
+				newphoto.className = "photo";
+				newul.appendChild(newphoto);
+
+				var newtime = document.createElement("li");
+				newtime.className = "time";
+				newtime.innerHTML = "大灰狼和小白兔:　"+year+"/"+Mon+"/"+Dat+" "+h+":"+m+":"+s;
+				newul.appendChild(newtime);         
+
+				var newtext = document.createElement("li");
+				newtext.innerText = cont;
+				newtext.className = "text";
+				newul.appendChild(newtext);
+
+				var newdel = document.createElement("li");
+				newdel.setAttribute("class","del");
+				// newdel.className = "del";  // ↑效果和上面的一样
+				newdel.innerText = "删除";
+				newul.appendChild(newdel);
+				area.value = "";
+				show.style.background = "#555";
+			}else{
+				alert("您还没有输入内容");
+			} 
+			Del();  
+		}
+	}
+	//  ↓↓↓删除发表的帖子
+	function Del(){
+		// var dels = box.getElementsByClassName('del');
+		var dels = document.querySelectorAll('.del');
+		var ul = box.getElementsByTagName('ul');
+		for (var i = 0; i < dels.length; i++) {
+			dels[i].onclick = function(){
+				for (var i = 0; i < dels.length; i++) {
+					if (this==dels[i]) {
+						box.removeChild(this.parentNode);
+					};
+				};
+			}
+		};
+	}
+
+</script>
+</body>
+</html>

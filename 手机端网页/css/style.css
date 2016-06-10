@@ -1,0 +1,129 @@
+.orange{
+	color: #f60;
+}
+
+.menuBox{
+	position: relative;
+	padding: 38px 0;
+	width: 100%;
+	height: 272px;
+	background: #fff;
+}
+.menuBox .btm{
+	position: relative;
+	bottom: -32px;
+}
+.menuHome .F1,.menuHome .F2,.menuHome .F3,.menuHome .F4{
+	float: left;
+	padding: 0 37px;
+	width: 86px;
+	text-align: center;
+	overflow: hidden;
+}
+.F1 a,.F2 a,.F3 a,.F4 a{
+	margin-bottom: 10px;
+	float: left;
+	width: 82px;
+	height: 82px;
+	background: url("../img/spirit.png")no-repeat -332px -11px;
+}
+.F2 a{
+	background: url("../img/spirit.png")no-repeat -487px -11px;
+}
+.F3 a{
+	background: url("../img/spirit.png")no-repeat -650px -11px;
+}
+.F4 a{
+	background: url("../img/spirit.png")no-repeat -811px -11px;
+}
+.btm .F1 a{
+	background: url("../img/spirit.png")no-repeat -332px -163px;
+}
+.btm .F2 a{
+	background: url("../img/spirit.png")no-repeat -487px -163px;
+}
+.btm .F3 a{
+	background: url("../img/spirit.png")no-repeat -656px -163px;
+}
+.btm .F4 a{
+	background: url("../img/spirit.png")no-repeat -812px -163px;
+}
+.menuHome span{
+	font-size: 22px;
+	color: #333;
+}
+.F4 span{
+	margin-left: -3px;
+	float: left;
+	width: 90px;
+}
+.new{
+	width: 170px;
+	height: 60px; 
+	line-height: 60px;
+	color: #9a9a9a;
+	font-size: 30px;
+}
+.new i{
+	margin: 17px 12px 0 14px;
+	float: left;
+	width: 30px;
+	height: 30px;
+	background: url("../img/spirit.png")no-repeat -28px -313px;
+}
+.show{
+	position: relative;
+	margin: auto;
+	width: 614px;
+	height: 148px;
+	border-top: 1px solid #ccc;
+}
+.show li{
+	float: left;
+	color: #9a9a9a;
+}
+.show .photo{
+	margin: 15px 16px 0 4px;
+	width: 170px;
+	height: 117px;
+	background: url("../img/1.jpg");
+}
+.show .photo2{
+	background: url("../img/2.jpg");
+}
+.show .photo3{
+	background: url("../img/3.jpg");
+}
+.show .photo4{
+	background: url("../img/4.jpg");
+}
+.show .showTitle{
+	margin-top: 20px;
+	width: 424px;
+	font-size: 24px;
+	color: #333;
+}
+.show .time{
+	margin-top: 20px;
+}
+.show .time i,.show .add i{
+	margin: 0 5px 0 0;
+	float: left;
+	width: 20px;
+	height: 21px;
+}
+.show .time i{
+	background: url(../img/spirit.png)no-repeat -136px -279px;
+}
+.show .add{
+	margin-top: 10px;
+}
+.show .add i{		
+	background: url(../img/spirit.png)no-repeat -136px -359px;
+}
+.show .RMB{
+	position: absolute;
+	overflow: hidden;
+	top: 30px;
+	right: 10px;
+}
