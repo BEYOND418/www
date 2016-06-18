@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <script src="jquery-1.11.3.min.js"></script>
+    <style>
+        #loading{
+            position: absolute;
+            top: 50%;
+            left: 46%;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+	用户名：<input type="text" placeholder="请输入昵称" id="user">
+	手机号：<input type="text" placeholder="请输入手机号" id="tel">
+	<input type="button" value="确定" style="margin-left:20px" id="submit">
+	<a href="###" id="chaKan">查看</a>
+    <div id="loading"></div>
+
+	<script>
+	var user = document.getElementById('user');
+	var tel = document.getElementById('tel');
+	submit.onclick = function(){
+        var json = {'name':user.value,'mobile':tel.value};
+        $.ajax({
+			type:'post',
+			url:'http://sjz.bokanedu.com/tgr/api/?day=52&type=og',
+			data:json,
+			datatype:'json',
+			beforeSend:function(XMLHttpRequest){
+                $('#loading').css({
+                    display:"blick"
+                }).html("loading...")
+			},
+			success:function(data){
+                var dta = JSON.parse(data);
+                alert(dta.msg)
+			},
+			complete:function(XMLHttpRequest,textStatus){
+                $('#loading').css({display:"none"})
+			},
+			error:function(data){
+                alert(data)
+			}
+		})
+    }
+    var chaKan = document.getElementById('#chaKan');
+    $('#chaKan').click(function(){
+        $.ajax({
+            type:'post',
+            url:'http://sjz.bokanedu.com/tgr/api/?day=52-2&type=zj',
+            data:null,
+            beforeSend:function(XMLHttpRequest){
+                $('#loading').css({
+                    display:"blick"
+                }).html("loading...")
+            },
+            success:function(data){
+                var dta = JSON.parse(data).data;
+                console.log(dta)
+                for(var i=0; i<dta.length; i++){
+                    localStorage.setItem(dta[i].name,dta[i].tele)
+                }
+//                localStorage.clear()
+                window.location.href= 'show.html';
+            },
+            complete:function(XMLHttpRequest,textStatus){
+                $('#loading').css({display:"none"})
+            },
+            error:function(data){
+                alert(data)
+            }
+        })
+    })
+	</script>
+</body>
+</html>

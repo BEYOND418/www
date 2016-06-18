@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1.cookie</title>
+</head>
+<body>
+	<button>写入button</button>
+	<script>
+	// var btn = document.getElementsByTagName('button')[0];
+	// btn.onclick = function(){
+	// 	document.cookie='passsword=888888';
+	// 	document.cookie='age=20';
+	// }
+
+
+	//cookie的生命周期
+	var btn = document.getElementsByTagName('button')[0];
+	// var t=new Date();
+	// console.log(t)
+	// var time=t.setTime(t.getTime()+120000)
+	// console.log(t)
+	// console.log(t.getTime()+120000)
+	var t=new Date(2016,4,26,02,30,0);
+	console.log(t)
+
+	btn.onclick = function(){
+		document.cookie = 'name=liji;expires='+t;
+	}
+	</script>
+</body>
+</html>

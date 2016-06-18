@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>地理定位</title>
+</head>
+<body>
+	<script>
+	var geo = navigator.geolocation;
+	console.log(geo) //返回对象
+	geo.getCurrentPosition(function(pos){
+		console.log(pos);sdfsdlfjo
+		document.write(pos);
+		alert('维度'+pos.coords.latitude)
+		alert('经度'+pos.coords.longitude)
+		alert('精度'+pos.coords.accuracy)
+
+	},function(errer){
+		alert('xx'+errer)
+	})
+	</script>
+</body>
+</html>

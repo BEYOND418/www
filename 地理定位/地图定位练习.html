@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://api.map.baidu.com/api?v=2.0&ak=ihF99mhxPFpGZXG0n1aTL23BhRs2DYXe"></script>
+	<style>
+	html,body{
+		width: 100%;
+		height: 100%;		
+	}
+	*{margin: 0;padding: 0;}
+	#map{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		width: 90%;
+		height: 80%;
+	}
+	#box{
+		position: absolute;
+		top: 15%;
+		left: 10%;
+	}
+	#txt,#go,#btn{
+		margin-left: 6px;
+		float: left;
+		border: 0;
+		height: 40px;
+		font-size: 18px;
+		font-family: "Microsoft YaHei";	
+		border-radius: 4px;	
+	}
+	#txt{
+		width: 300px;
+		text-indent: 10px;
+	}
+	#go{
+		width: 40px;
+		background: #00A3FF;
+		color: #fff;
+	}
+	#btn{
+		width: 80px;
+		background: #00A3FF;
+		color: #fff;
+	}
+	</style>	
+</head>
+<body>
+	<div id="map"></div>
+	<div id="box">
+		<input type="text" id="txt">
+		<button id="go">GO</button>
+		<button id="btn">我的位置</button>
+	</div>
+	<script>
+	var map = document.getElementById('map');
+	var txt = document.getElementById('txt');
+	var btn = document.getElementById('btn');
+	var go = document.getElementById('go');
+	var mymap = new BMap.Map('map');
+	mymap.centerAndZoom(new BMap.Point(116.194977,39.917601),15)
+	mymap.addControl(new BMap.NavigationControl());    
+	mymap.addControl(new BMap.ScaleControl());    
+	mymap.addControl(new BMap.OverviewMapControl());    
+	mymap.addControl(new BMap.MapTypeControl()); 
+	// map.setCurrentCity("北京"); 
+	
+	mymap.enableScrollWheelZoom();//滚轮缩放
+
+	//指定地方加标识
+	// var point = new BMap.Point(116.194977,39.917601);
+	// var marker = new BMap.Marker(point);
+	// mymap.addOverlay(marker);
+	// console.log(point)
+	// mymap.addEventListener("dragend", function(){    
+ // 		var center = mymap.getCenter();    
+ // 		console.log("地图中心点变更为：" + center.lng + ", " + center.lat);    
+	// });
+
+	mymap.addEventListener("click", function(e){      
+ 		var xy = new BMap.Point(e.point.lng,e.point.lat);
+ 		var marker = new BMap.Marker(xy);
+ 		console.log(e.point.lng,e.point.lat)
+		mymap.addOverlay(marker);
+		// mymap.centerAndZoom(new BMap.Point(xy),15)
+	});
+ 
+ 	btn.onclick = function(){
+ 		var geo = navigator.geolocation;
+ 		geo.getCurrentPosition(function(pos){
+ 			var x = pos.coords.longitude;
+ 			var y = pos.coords.latitude;
+			var p = new BMap.Point(x,y);
+			console.log(p)
+	 		var marker = new BMap.Marker(p);
+			mymap.addOverlay(marker);
+			mymap.panTo(p);
+ 		})
+ 	}
+	</script>
+</body>
+</html>

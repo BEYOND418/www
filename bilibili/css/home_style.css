@@ -605,6 +605,22 @@ img{
     opacity: .6;
 }
 
+.advertBox{
+	overflow: hidden;
+	margin: 26px auto 0;
+	width: 1129px;
+	height: 93px;
+	border-radius: 6px;
+}
+.advert{
+	float: left;
+	overflow: hidden;
+}
+.advert img{
+	float: left;
+	width: 100%;
+	height: 100%;
+}
 /*	↓↓↓楼层样式	*/
 .content{
     margin: 50px auto 0;
@@ -613,10 +629,95 @@ img{
     /*background: #F2F2F2;*/
     box-shadow: 0 1px 3px 0 #999;
 }
-.content i{
+.p0{
+	margin: 50px auto 0;
+    width: 1126px;
+    height: 245px;
+}
+.content .tit-box,
+.p0 .tit-box{
+	overflow: hidden;
+	line-height: 40px;
+}
+.content .tit-box h2,
+.p0 .tit-box h2{
+	float: left;
+	font-weight: normal;
+}
+.p0 .tit-box a{
+	margin: 18px 0 0 10px;
+	float: left;
+	font-size: 12px;
+	color: #888;
+	line-height: normal;
+}
+.p0 .tit-box a:hover{
+	color: #00A1D6;
+}
+.p0 .tit-right{
+	float: right;
+	border-radius: 4px;
+	background: #E5E9EF;
+	padding: 0 20px;
+	overflow: hidden;
+}
+.p0 .tit-right span{
+	float: left;
+	height: 34px;
+	line-height: 34px;
+}
+.p0 .tit-right span a{
+	margin: 0;
+	float: none;
+}
+.p0 .tit-right .tit-r-line{
+	display: inline-block;
+	margin: 12px 10px 0;
+	width: 1px;
+	height: 12px;
+	background: #999;
+}
+.content i,
+.p0 i{
     float: left;
-    width: 40px;
+    width: 44px;
     height: 40px;
+}
+.p0 .left-list{
+	float: left;
+	padding: 10px 0 0 0;
+	overflow: hidden;
+	text-align: center;
+}
+.p0 .left-list li{
+	float: left;
+	margin: 0 20px 20px 0;
+}
+.p0 .left-list a img{
+	margin-bottom: 10px;
+	float: left;
+	width: 180px;
+	height: 110px;
+}
+.p0 .left-list .title{
+	display: inline-block;
+	width: 160px;
+	font-size: 12px;
+	line-height: normal;
+}
+.p0 .left-list .title:hover{
+	color: #00A1D6;
+}
+.p0 .right-photo{
+	margin-top: 10px;
+	float: left;
+	overflow: hidden;
+}
+.p0 .right-photo img{
+	display: inline-block;
+	width: 326px;
+	height: 180px;
+	border-radius: 4px;
 }
 /*.content .title{*/
     /*float: left;*/
@@ -629,7 +730,7 @@ img{
     /*color: #333;*/
 /*}*/
 .p1{
-    margin-top: 150px;
+    margin-top: 70px;
 }
 .content .b-tab{
     width: 700px;
@@ -721,8 +822,12 @@ img{
     background-position: -805px -38px;
 }
 
-.content i{
+.content i,
+.p0 i{
     background: url(../img/icons.png) no-repeat -140px -652px;
+}
+.p0 i{
+    background-position: -140px -78px;
 }
 .p2 i{
     background-position: -140px -910px;

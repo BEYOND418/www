@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1.地理定位</title>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<script>
+	var div = document.getElementsByTagName('div')
+	var geo = navigator.geolocation;
+	// console.log(geo);//返回的是对象
+	geo.getCurrentPosition(function(data){
+		div[0].innerHTML = "当前纬度: "+data.coords.latitude;
+		div[1].innerHTML = "当前经度: "+data.coords.longitude;
+		div[2].innerHTML = "位置精度: "+data.coords.accuracy;
+		div[3].innerHTML = "海拔: "+data.coords.altitude;
+		div[4].innerHTML = "海拔精度: "+data.coords.altitudeAccuracy;
+		div[5].innerHTML = "方向(从正北开始以度计): "+data.coords.heading;
+		div[6].innerHTML = "速度(以米/每秒计): "+data.coords.speed;
+		div[7].innerHTML = "响应的日期/时间: "+data.timestamp;
+
+	});
+	</script>
+</body>
+</html>

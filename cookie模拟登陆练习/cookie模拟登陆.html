@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>模拟登陆</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		body{
+			background: black;
+			color: white;
+		}
+		#box{
+			position: absolute;
+			top: 40px;
+			left: 50%;
+			width: 300px;
+			height: 140px;
+			border: 2px solid skyblue;
+			border-radius: 4px;
+			margin-left: -150px;
+			background: #eee;
+			-webkit-animation:fadeIn 2s ease;
+		}
+		.aa{
+			margin-top: 10px;
+			margin-bottom: 20px;
+		}
+		.btn{
+			width: 48px;
+			height: 32px;
+			border-radius: 2px;
+			border: 0;
+			background: #4EAFBF;
+			color: white;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		.btn1{
+			position: absolute;
+			top: 96px;
+			left: 50%;
+			margin-left: -72px;
+		}
+		.btn2{
+			position: absolute;
+			top: 96px;
+			left: 50%;
+			margin-left: 24px;
+		}
+		#txt{
+			position: absolute;
+			top: 200px;
+			left: 50%;
+			margin-left: -150px;
+			width: 300px;
+			height: 140px;
+			color: white;
+		}
+		@-webkit-keyframes fadeIn{
+			0%{opacity: 0;top: 0px;}
+			100%{opacity: 1;top: 40px;}
+		}
+		@-webkit-keyframes fadeOut{
+			0%{opacity: 1;top: 40px;}
+			100%{opacity: 0;top: 0px;}
+		}
+
+	</style>
+</head>
+<body>
+	<div id="box">
+		&nbsp;&nbsp;UserName: <input type="text" class="aa"><br>
+		&nbsp;&nbsp;PassWord: <input type="text" class="aa"><br>
+		<input type="button" value="登录" class="btn btn1">
+		<input type="button" value="取消" class="btn btn2">
+	</div>
+	<div id="txt"></div>
+	<script>
+		var btn = document.getElementsByTagName('input');
+		var div = document.getElementById('box');
+		var txt = document.getElementById('txt');
+		var time = 4;
+
+		btn[3].onclick = function(){
+			div.style.webkitAnimation = "fadeOut 1s ease forwards";
+		}
+		
+		//此处有改动 要先判断是否有cookie数据（即data值）
+		var data = document.cookie;
+		if(data){
+			// console.log(data);
+			var x = data.split(";")
+			// console.log(x);
+			var key = x[0].split("=");
+			var val = x[1].split("=");
+			// console.log(key,val)
+			if(key[1]=="liji"){
+				btn[0].value = key[1];
+				//禁止使用按钮
+			}
+
+		}
+		
+		//"liji"可以使用cookie提取的值来进行动态设置
+		
+
+
+		if(!btn[0].value){
+			//内容为空
+			alert("请输入账号");
+			btn[2].onclick = function(){
+				if(btn[0].value!=""){
+				document.cookie = "username="+btn[0].value;
+				document.cookie = "password="+btn[1].value;
+				window.location.href= "loading.html";
+				}else{
+					alert("请输入账号");
+				}
+			}
+		}else{
+			// txt.innerHTML = "距离跳转还有"+time+"秒";
+			//有值得时候
+			function show(){
+					// alert()
+					console.log("1123")
+					txt.innerHTML = "距离跳转还有"+time+"秒";
+					time--;
+				}
+			setInterval(show,1000);
+			setTimeout(function(){
+
+				window.location.href= "loading.html";
+			},5000);
+		}
+	</script>
+</body>
+</html>

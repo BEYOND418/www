@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button>按钮</button>
+	<script>
+		//临时存储
+		// sessionStorage.setItem('sex','nv');
+
+		var btn = document.getElementsByTagName('button');
+		btn[0].onclick = function(){
+			localStorage.setItem('age','18');
+			localStorage.setItem('name','jxy');
+			localStorage.setItem('sex','sss')		
+		}
+		// console.log(localStorage.getItem("age"))
+		console.log(localStorage.key(localStorage.length-1))
+		localStorage.clear();
+		// localStorage.removeItem('sex')
+	</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+/*有网络的状态提前缓存进来，当网络*/
+.online{
+	display: none;
+}
+.offline{
+	font-size: 20px;
+	color: #ccc;
+}

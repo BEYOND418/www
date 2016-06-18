@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="js/jquery-1.11.3.min.js"></script>
+<body>
+<div>
+    用户名：<input type="text" id="uname" placeholder="请输入昵称"/>
+    手机号：<input type="text" id="mobile" placeholder="请输入手机号"/>
+    <input type="button" id="btn" value="确定"/>
+</div>
+<a href="bb.html">查看</a>
+<script>
+    $(function(){
+        $("#btn").on("click",btn());
+
+        function btn(){
+            $.ajax({
+                type:"post",
+                url:"http://sjz.bokanedu.com/tgr/api/?day=52&type=og",
+                async:true,
+                data:{name:$("#uname").val(),mobile:$("#mobile").val()},
+                dataType:"json",
+                success:function(data){
+                    console.log(data)
+                    if(data.code==0){
+                        alert("ok");
+                    }else{
+                        alert(data.msg);
+                    }
+
+                }
+            })
+        }
+    })
+</script>
+</body>
+</html>

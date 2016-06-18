@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3.百度地图覆盖物</title>
+	<script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>
+	<style>
+		#map{
+			width: 500px;
+			height: 500px;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="map"></div>
+	<button id="btn">标记位置</button>
+	<script>
+	//初始化结束
+	var mymap = new BMap.Map("map");
+	var point = new BMap.Point(116.404,39.915)
+	mymap.centerAndZoom(point,12);
+	//鼠标滚轮控制缩放
+	mymap.enableScrollWheelZoom();
+
+	//覆盖物
+	//覆盖物的标识类
+	// var marker = new BMap.Marker(point);
+	// mymap.addOverlay(marker);
+
+	// var m1 = new BMap.Marker(new BMap.Point(116.188,39.915));
+	// mymap.addOverlay(m1);
+	// //清除指定标识物
+	// mymap.removeOverlay(marker);
+	// //标识物全清
+	// // mymap.clearOverlays();
+
+	// //自定义标识
+	// var icon = new BMap.Icon("liji222.jpg",new BMap.Size(50,50));
+	// //位标记物重置图例
+	// icon.setImageSize(new BMap.Size(20,20));
+	// m1.setIcon(icon);
+
+	//线段
+	var pol = new BMap.Polyline([
+		new BMap.Point(116.188,39.915),
+		new BMap.Point(116.404,39.915)
+	],{
+		strokeColor:"blue",strokeWeight:6
+	});
+	mymap.addOverlay(pol);
+	</script>
+</body>
+</html>

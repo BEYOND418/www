@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+    <style>
+        #tank{
+            width:400px;
+            height:300px;
+            background-color: #D8D8D8;
+            display: none;
+            position: absolute;
+        }
+        #close{
+            display: block;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="登录" id="log"/>
+<div id="tank">
+    <input type="button" value="关闭" id="close"/>
+</div>
+<script>
+    $(function (){
+        function pos(){
+            var top=($(window).width()-$("#tank").width())/2;
+            var left=($(window).height()-$("#tank").height())/2;
+            $("#tank").css({"left":top+"px","top":left+"px"});
+        }
+        $("#log").click(function (){
+            $("#tank").show(pos());
+            $(window).resize(function (){
+                if($("#tank").show()){
+                    pos();
+                }
+            })
+        });
+        $("#close").click(function (){
+            $("#tank").hide();
+        });
+    })
+</script>
+</body>
+</html>

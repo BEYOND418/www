@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>
+	<style>
+		html,body{
+			height: 100%;
+		}
+		*{margin: 0;padding: 0;}
+		#map-cont{
+			width: 100%;
+			height: 100%;
+			/*margin: 100px auto 0;*/
+		}
+		#btn1{
+			width: 20%;
+			height: 8%;
+			background: gray;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border: 2px solid black;
+			font-size: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div id="map-cont"></div>
+	<button id="btn1">我的位置</button>
+	<script>
+		var geo = navigator.geolocation;
+
+		var map = new BMap.Map("map-cont");
+		var point = new BMap.Point(116.404, 39.915);
+		map.centerAndZoom(point, 15);
+		map.enableScrollWheelZoom();
+
+		btn1.onclick = function(){
+			// var x = 116.198;
+			// var y = 39.913;
+			// var p = new BMap.Point(x,y)
+			// console.log(p)
+			// var marker = new BMap.Marker(p);
+			// map.addOverlay(marker);
+			// setTimeout(function(){  
+			//  		console.log("run")
+			//  	    map.panTo(p);    
+			// }, 2000);
+
+
+			geo.getCurrentPosition(function(data){
+				var y = data.coords.latitude;
+				var x = data.coords.longitude;
+				var p = new BMap.Point(x,y);
+				var marker = new BMap.Marker(p);
+				map.addOverlay(marker);
+
+				setTimeout(function(){  
+					console.log("run")
+				    map.panTo(p);    
+				}, 2000);
+			});
+		}
+	</script>
+</body>
+</html>

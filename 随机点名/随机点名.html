@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-color: #333;
+		}
+		ul{			
+			margin-top: 10px;
+			overflow: hidden;
+			list-style: none;
+		}
+		li{
+			margin-right: 10px;
+			float: left;
+			width: 140px;
+			height: 50px;
+			background: #666;
+			color: #fff;
+			text-align: center;
+			line-height: 50px;
+		}
+		#left{
+			float: left;
+			overflow: hidden;
+			margin: 50px 0 0 50px;
+		}
+		#right{
+			float: left;
+			overflow: hidden;
+			margin: 50px 0 0 50px; 
+		}
+	</style>
+</head>
+<body>
+	<div id="left">
+		<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	</div>
+
+	<div id="right">
+		<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	</div>
+
+	<script>
+	var arr = ["周立涛","王薇","方宇宏","孙赫","刘春光","兰勇","冯世强","张琪","王希然","牛春强","林园园","赵弯弯","马青青","江晓咏","文武","王龙飞","黎家伟","刘鹏林","谢柳生","梁聪","郭凤娟","包晗","郝琪","刘婷婷","卜旱秋","李沛虹","李航","张晓晶","程慧萍","郭静","朱小迪","孙宏宇","齐凯","李文超","曾维安","黄斌","高飞翔","徐毅飞","彭宝保","孔东杰","蒋从明","刘玉骋",];
+	var lis = document.getElementsByTagName('li');
+	var i = 0,time,time1,time2;	
+	function aa(){	
+		var a = Math.floor(Math.random()*255);
+		var b = Math.floor(Math.random()*255);
+		var c = Math.floor(Math.random()*255);
+		lis[i].style.backgroundColor = "rgb("+a+","+b+","+c+")";
+		lis[i].innerHTML = arr[i];
+		i++;
+		if (i==42) {clearInterval(time)};
+	}
+	time = setInterval(aa,10);
+	window.onclick = function(){
+		clearInterval(time1);
+		clearInterval(time2);
+		function bb(){
+			for (var i = 0; i < 42; i++) {
+				lis[i].style.opacity = "0.2";			
+			};		
+			k = Math.floor(Math.random()*42);			
+				lis[k].style.opacity = "1";	
+				// console.log(k);
+			};			
+		function cc(){
+			clearInterval(time1);
+		}
+		time1 = setInterval(bb,80);
+		time2 = setInterval(cc,3000);
+	}
+	</script>
+</body>
+</html>

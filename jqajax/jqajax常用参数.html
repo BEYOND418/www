@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jq.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.show{
+			width: 100px;
+			height: 40px;
+			border:1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<div class="show"></div>
+	<div class="content"></div>
+</body>
+<script>
+	x = {"name":"liji","age":"18"}
+	$.ajax({
+		type:"post",					//必选 发送方式			
+		url:"http://180.76.185.227/lj/ljp.php",				//必选 地址
+		data:x,			//可选
+		dataType:"json",				//可选 要取得数据类型
+		contentType:"application/JSON;charset=utf-8",	//可选
+		
+		beforeSend:function(XMLHttpRequest){
+			alert(1)
+			$(".show").html('loading...');
+		},
+		success:function(data){			//必选 成功时的回调函数
+			alert(2)
+			console.log(data)
+			$(".content").html(data);
+		},
+		complete:function(XMLHttpRequest,textStatus){
+			alert(3)
+			$(".show").html('complete').css("border","none");
+		},
+		error:function(){
+			alert('error');
+		}
+	});
+</script>
+</html>

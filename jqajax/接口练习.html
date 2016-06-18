@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>接口练习</title>
+	<script src="jq.js"></script>
+</head>
+<body>
+	<input type="text">
+	<input type="button" value="检测">
+	<script>
+	// $("input").eq(1).click(function(){
+	// 	var x = $("input").eq(0).val();
+	// 	$.ajax({
+	// 		type:"get",
+	// 		url:"http://sjz.bokanedu.com/tgr/api/?day=1-2",
+	// 		data:x,
+	// 		success:function(d){
+	// 			console.log(d)//用户名已经重复
+	// 		}
+	// 	});
+
+	// })
+
+		// $.ajax({
+		// 	type:"get",
+		// 	url:"http://sjz.bokanedu.com/tgr/api/?day=1-2",
+
+		// 	success:function(d){
+		// 		console.log(d);
+		// 	}
+		// });
+
+	$.ajax({
+		type:"get",
+		url:"http://sjz.bokanedu.com/tgr/api/?day=4-2&&type=car",
+		// dataType:"json",
+		success:function(d){
+			console.log(d)
+			var x = eval( "("+d+")" );
+			console.log(x);
+			// console.log(x.data.id);
+			// $("div").html(x.data.id)
+			// console.log(d)
+		}
+	});
+	</script>
+</body>
+</html>

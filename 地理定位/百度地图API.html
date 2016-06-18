@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>百度地图API</title>
+	<script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>
+	<style>
+	#map{
+		width: 500px;
+		height: 500px;
+		margin: 80px;
+	}
+	</style>
+</head>
+<body>
+	<div id="map"></div>
+	<button id="btn"></button>
+	<script>
+	// 百度地图API
+	//初始化完成	
+	var mymap = new BMap.Map('map');
+	var point = new BMap.Point(116.404,39.915)
+	mymap.centerAndZoom(point,15);
+
+	// //百度地图控件
+	// mymap.addControl(new BMap.NavigationControl());
+	// mymap.addControl(new BMap.ScaleControl());
+	// mymap.addControl(new BMap.OverviewMapControl());
+	// mymap.addControl(new BMap.MapTypeControl());
+
+	// var add1 = new BMap.NavigationControl();
+
+	// add1.setAnchor(BMAP_ANCHOR_TOP_RIGHT);//控件位置
+	// add1.setOffset(new BMap.Size(100,50))//控件精确位置
+
+	// mymap.addControl(add1);
+	// //map.setCurrentCity("北京"); // 仅当设置城市信息时，MapTypeControl的切换功能才能可用
+
+	//鼠标滚轮控制缩放
+	mymap.enableScrollWheelZoom();
+
+
+
+	//百度地图覆盖物
+	//覆盖物的标识点
+	var marker = new BMap.Marker(point);
+	mymap.addOverlay(marker);
+
+	var m1 = new BMap.Marker(new BMap.Point(116.187,39.90))
+	mymap.addOverlay(m1)
+
+	//清除指定标识
+	// mymap.removeOverlay(marker);
+
+	//清除全部标识
+	// mymap.clearOverlay();
+
+	//自定义标识
+	var icon = new BMap.Icon('121.png',new BMap.Size(100,100));
+	icon.setImageSize(new BMap.Size(20,20))
+	marker.setIcon(icon);
+
+	var date=[{}]
+	btn.onclick = function(){
+
+	}
+
+	//添加线段
+	var pol = new BMap.Polyline([
+			new BMap.Point(116.188,39.915),
+			new BMap.Point(116.404,39.915),
+		],{
+			strokeColor:"blue",
+			strokeWeight:6
+		})
+	mymap.addOverlay(pol);
+	</script>
+</body>
+</html>

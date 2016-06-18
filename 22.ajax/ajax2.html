@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//ajax请求步骤
+		//1、创建一个请求对象
+		if(window.XMLHttpRequest){
+			var ajax=new XMLHttpRequest();
+		}else{
+			var ajax=new ActiveXObject("Microsoft.XMLHTTP");
+		} //调ie6的兼容性
+		//2、按号
+		// ajax.open("GET","test.txt",true);
+		//参数一表示发送方式，分别是get/post；参数二表示要访问的url；参数三表示是否发送异步请求
+		//GET  容量小 安全性低
+		//POST 容量大 相对比较安全
+
+		//测试
+		ajax.open("GET","js.js",true);
+		var data=123;
+		//3、拨号
+		ajax.send(data/null);
+		//4、拨号成功
+		ajax.onreadystatechange=function(){	
+				// console.log(ajax.status);
+			if(ajax.readyState==4){
+				// alert(1);
+				if(ajax.status==200){
+					// alert("ajax请求成功");
+					var evaljs=ajax.responseText;
+					eval(evaljs);
+					// console.log(ajax.responseText);
+				}else{
+					alert("ajax请求失败");
+				}
+			}
+		}
+		// ajax.onload=function(){
+		// 	//5、听到对方回答
+		// 	alert();
+		// 	console.log(ajax.responseText);
+		// };
+	</script>
+</body>
+</html>

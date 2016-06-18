@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="ajax.js"></script>
+</head>
+<body>
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+	<script>
+	var lis = document.getElementsByTagName('li');
+	var arr = [];
+	ajax("json.json",function(data){
+		// var edata = eval(data);
+		var edata = JSON.parse(data);
+		console.log(edata);
+		arr.push(edata.age);
+		arr.push(edata.name);
+		arr.push(edata.password);
+		console.log(arr)
+		for (var i = 0; i < lis.length; i++) {
+			lis[i].innerHTML = arr[i];
+		};
+	},function(){
+		alert("sdfsd")
+	})
+	</script>
+</body>
+</html>

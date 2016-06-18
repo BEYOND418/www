@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>loading</title>
+</head>
+<body>
+	<p></p>
+	<p></p>
+
+	<script>
+	var p = document.getElementsByTagName('p');
+
+
+	var data = document.cookie;
+		// console.log(data);
+	var x = data.split(";")
+		// console.log(x);
+	var key = x[0].split("=");
+	var val = x[1].split("=");
+		console.log(key,val)
+
+	p[0].innerHTML = key[0]+": "+key[1];
+	p[1].innerHTML = val[0]+": "+val[1];
+
+
+	</script>
+</body>
+</html>

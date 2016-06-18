@@ -1,0 +1,17 @@
+[
+	{
+		"name":"老王",
+		"age":22,
+		"number":[12,23,23]
+	},
+	{
+		"name":"老张",
+		"age":23,
+		"number":[12,23,23]
+	},
+	{
+		"name":"老李",
+		"age":24,
+		"number":[{"sex":"nan","aihao":"chifan"},{"sex":"nv"}]
+	}
+]

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.11.1.min.js" type="text/javascript" charset="UTF-8"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .head,.foot{
+            width:1000px;
+            height:800px;
+            margin:0 auto;
+        }
+        .content{
+            width:1000px;
+            margin:0 auto;
+        }
+        .content div{
+            width:1000px;
+            height:300px;
+            background-color: yellowgreen;
+            border:1px solid red;
+            text-align: center;
+            font-size: 200px;
+        }
+        .floor{
+            width:50px;
+            position: fixed;
+            right:50px;
+            top:100px;
+            display: none;
+        }
+        .floor li{
+            width:50px;
+            height:50px;
+            border-bottom: 1px dotted grey;
+            line-height: 50px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .floor a{
+            text-decoration: none;
+            width:50px;
+            height:50px;
+            text-align: center;
+            display: block;
+        }
+        .floor .mr .show{
+            display: none;
+        }
+        .floor .mr .hid{
+            color:red;
+        }
+        .rtn{
+            width:50px;
+            height:50px;
+            background-color: pink;
+            position:fixed;
+            right:50px;
+            bottom:100px;
+            text-align: center;
+            line-height: 25px;
+        }
+    </style>
+</head>
+<body>
+<div class="head"></div>
+<div class="content">
+    <div class="con">1</div>
+    <div class="con">2</div>
+    <div class="con">3</div>
+    <div class="con">4</div>
+    <div class="con">5</div>
+    <div class="con">6</div>
+    <div class="con">7</div>
+    <div class="con">8</div>
+</div>
+<div class="foot"></div>
+<div class="floor">
+    <ul style="list-style: none;">
+        <li class="mr">
+            <a href="#" class="show">1</a>
+            <a href="#" class="hid">1层</a>
+        </li>
+        <li>
+            <a href="#" class="show">2</a>
+            <a href="#" class="hid">2层</a>
+        </li>
+        <li>
+            <a href="#" class="show">3</a>
+            <a href="#" class="hid">3层</a>
+        </li>
+        <li>
+            <a href="#" class="show">4</a>
+            <a href="#" class="hid">4层</a>
+        </li>
+        <li>
+            <a href="#" class="show">5</a>
+            <a href="#" class="hid">5层</a>
+        </li>
+        <li>
+            <a href="#" class="show">6</a>
+            <a href="#" class="hid">6层</a>
+        </li>
+        <li>
+            <a href="#" class="show">7</a>
+            <a href="#" class="hid">7层</a>
+        </li>
+        <li>
+            <a href="#" class="show">8</a>
+            <a href="#" class="hid">8层</a>
+        </li>
+    </ul>
+    <div class="rtn">返回 顶部</div>
+</div>
+
+<script>
+    $(window).scroll(function (){
+        var winT=$(window).scrollTop();
+        var winH=$(window).height();
+        if(winT+winH>$(".content").offset().top&&winT<$(".foot").offset().top){
+            $(".floor").show();
+        }else{
+            $(".floor").hide();console.log('sdf')
+        }
+        $(".con").each(function (index){
+            var thisT=$(".con").eq(index).offset().top;
+            if(index+1<8){
+                var nextT=$(".con").eq(index+1).offset().top;
+                if(winT+winH/5>thisT&&winT+winH/5<nextT){
+                    $(".floor li").eq(index).addClass("mr").siblings().removeClass("mr");
+                }
+            }else{
+                if(winT+winH/5>thisT){
+                    $(".floor li").eq(index).addClass("mr").siblings().removeClass("mr");
+                }
+            }
+        })
+    })
+    $(".floor li").click(function (){
+        var winH=$(window).height();
+        var index=$(".floor li").index(this);
+        $("body").animate({
+            scrollTop:$(".con").eq(index).offset().top-winH/5
+        },"slow")
+    })
+    $(".rtn").click(function (){
+        $("body").animate({
+            scrollTop:"0"
+        },"slow")
+    })
+</script>
+</body>
+</html>

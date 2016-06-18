@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding:0;
+	}
+	ul{
+		list-style: none;
+	}
+	.box{
+		margin: 100px;	
+		width: 600px;
+		height: 600px;
+		background: #ccc;
+	}
+	.tabr{
+		width: 100%;
+		height: 60px;
+	}
+	.tabr li{
+		float: left;
+		width: 198px;
+		height: 100%;
+		background: #444;
+		border: 1px solid red;
+		cursor: pointer;
+		font-size: 30px;
+		color: #f4f4f4;
+		text-align: center;
+		line-height: 60px;
+	}
+	#parBox{
+		width: 100%;
+		height: 100%;
+	}
+	</style>
+	<script src="ajax.js"></script>
+</head>
+<body>
+	<div class="box">
+		<ul class="tabr" id="tabr">
+			<li>春天</li>
+			<li>夏天</li>
+			<li>秋天</li>
+		</ul>
+		<img src="" alt="" id="parBox">
+	</div>
+	<script>
+	var tabr = document.getElementById('tabr')
+	var lis = tabr.getElementsByTagName('li')
+	var pBx = document.getElementById('parBox')
+	// console.log(lis)
+	var arr = [];
+	ajax("http://180.76.185.227/lj/ljp.php",photo,fun);
+	function photo(data){
+		var par = JSON.parse(data);
+		console.log(par)
+		arr.push(par.msg.img1)
+		arr.push(par.msg.img2)
+		arr.push(par.msg.img3)
+		console.log(arr)
+		pBx.src = arr[0];
+		for (var i = 0; i < lis.length; i++) {
+			lis[i].index=i;
+			lis[i].onclick = function(){
+				pBx.src = arr[this.index];
+			}
+		};
+
+	}
+	function fun(){
+		alert("图片加载失败")
+	}
+	</script>
+</body>
+</html>

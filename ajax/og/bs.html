@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+    var data = [];
+    var page = 0;
+    var nums = 10;
+
+    function showData() {
+      var s = page*nums;
+      var e = s+nums;
+      var len = data.length;
+      if(len<=s)
+      {
+            return;
+      }
+      var html="";
+      if(e>len){
+            e=data.length;
+      }
+      for(var i=s; i<e; ++i){
+            var item = data[i];
+            html+="<li>"+(i+1)+item.name+item.tele+item.gift+"</li>";
+      }
+      $('#content').html(html);
+      showPage();
+    }
+    function go(index){
+      page =index;
+      showData();
+    }
+    function showPage(){
+      var len = data.length;
+      var pages = Math.ceil(len/nums);
+
+      var li = [];
+      if(page==0){
+        li.push('<li class="disabled"><a href="#">Prev</a></li>');
+      }else{
+        li.push('<li><a href="javascript:go('+(page-1)+')">Prev</a></li>');
+      }
+      for(var i=0;i<pages;++i){
+        if(i==page){
+          li.push('<li class="disabled"><a href="#">'+(i+1)+'</a></li>');
+          continue;
+        }
+        li.push('<li><a href="javascript:go('+i+')">'+(i+1)+'</a></li>');
+      }
+      if(page==pages-1){
+        li.push('<li class="disabled"><a href="#">Next</a></li>');
+      }else{
+        li.push('<li><a href="javascript:go('+(page+1)+')">Next</a></li>');
+      }
+      $('#nav').html(li.join(''));
+    }
+    </script>
+  </head>
+  <body>
+    <ul id="content"></ul>
+<div class="pagination">
+  <ul id="nav"></ul>
+</div>
+  <script>
+      $.ajax({
+          type:"post",
+          url:"test.json",
+          async:true,
+          dataType:"json",
+          success:function(d){
+            data = d.data;
+            showData();
+          }
+          });
+  </script>
+  </body>
+</html>

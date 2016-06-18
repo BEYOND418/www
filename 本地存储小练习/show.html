@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p></p>
+	<button>返回</button>
+	<script>
+	var but = document.getElementsByTagName('button')[0];
+	console.log(document.cookie);
+	var home = document.cookie.split(';');
+	var nam = home[0].split('=')[1];
+	var pas = home[1].split('=')[1];
+	console.log(nam,pas)
+	var show = document.getElementsByTagName('p')[0];
+	show.innerHTML = 'name:'+nam+'<br/>pass:'+pas;
+	but.onclick = function(){
+		history.go(-1)
+	}
+	</script>
+</body>
+</html>

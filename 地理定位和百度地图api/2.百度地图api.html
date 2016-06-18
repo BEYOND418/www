@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2.百度地图api</title>
+	<script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>
+	<style>
+		#map{
+			width: 500px;
+			height: 500px;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="map"></div>
+	<script>
+	//初始化结束
+	var mymap = new BMap.Map("map");
+	var point = new BMap.Point(116.404,39.915)
+	mymap.centerAndZoom(point,10);
+
+	//控件
+	// mymap.addControl(new BMap.NavigationControl());
+	// mymap.addControl(new BMap.ScaleControl());
+	// mymap.addControl(new BMap.OverviewMapControl()); 
+	// mymap.addControl(new BMap.MapTypeControl());   
+
+	var add1 = new BMap.NavigationControl;
+	//setAnchor设置控件位置
+	add1.setAnchor(BMAP_ANCHOR_TOP_RIGHT);
+	//最后向地图中添加控件add1
+	mymap.addControl(add1);
+	//控制控件位置,微调
+	add1.setOffset(new BMap.Size(10,10))
+	</script>
+</body>
+</html>

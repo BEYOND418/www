@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p id="res"></p>
+	<script>
+	var ww = new Worker('ww.js');
+	ww.postMessage('Hello Worker');
+	ww.onmessage = function(e){
+		var result = e.data;
+		res.innerHTML = result;
+	};
+	</script>
+</body>
+</html>

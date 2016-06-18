@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin: 0;padding: 0;}
+	body{background: #ccc}
+	.box{
+		position: relative;
+		margin: 100px;
+		width: 260px;
+		padding: 80px 80px;
+		background: #fff;
+		border-radius: 4px;
+		line-height: 40px;
+		text-align: center;		
+	}
+	.box span{
+		/*float: left;*/
+		/*margin-left: 20px; */
+	}
+	.box a{
+		margin: 20px 0 0 62px;
+		float: left;
+		width: 60px;
+		height:26px;
+		background: #f60;
+		text-decoration: none;
+		color: #fff;
+		line-height: 26px;
+	}
+	.box a:nth-of-type(2){
+		/*float: right;*/
+		/*background: #ccc;*/
+	}
+	.box p{
+		position: absolute;
+		padding:0 12px;
+		right: 20px;
+		top: 10px;
+		border-radius: 4px;
+		background-color: #f3f3f3;
+	}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<!-- <h1>新浪微博</h1> -->
+		<span>账号：</span>	<input type="text"><br>
+		<span>密码：</span>	<input type="password">
+		<a href="###">登陆</a>
+		<a href="###">取消</a>
+		<p></p>
+	</div>
+	<script>
+	alert("赶紧登陆！否则把你做成表情包！")
+	var btn = document.getElementsByTagName('a');
+	var nam = document.getElementsByTagName('input')[0];
+	var pas = document.getElementsByTagName('input')[1];
+	var p = document.getElementsByTagName('p')[0];
+	var time=null;
+	btn[1].onclick = function(){
+		clearInterval(time);
+		p.innerHTML="";
+	}	
+	btn[0].onclick = function(){
+		var t= new Date();
+		t.setTime(t.getTime()-(8*60*60*1000)+300000);
+		console.log(t)
+		if (nam.value!=''&&pas.value!="") {
+			document.cookie="name="+nam.value+";expires="+t;
+			document.cookie="pass="+pas.value+";expires="+t;
+			window.location.href = "show.html";		
+		}else{
+			alert("没内容？快输内容！")
+		};
+	}
+	if (document.cookie!=undefined) {
+		var home = document.cookie.split(';');
+		var _nam = home[0].split('=')[1];
+		var _pas = home[1].split('=')[1];
+		nam.value=_nam;
+		pas.value=_pas;
+		if (nam.value==_nam&&pas.value==_pas) {
+			time = setInterval(skip,1000);
+			var x=6;
+			function skip(){
+				x--;
+				p.innerHTML = "距离登陆时间还有："+x;
+				if (x==0&&nam.value==_nam&&pas.value==_pas) {window.location.href = "show.html";};
+			}
+		};
+	};
+	</script>
+</body>
+</html>

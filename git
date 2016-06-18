@@ -1,0 +1,939 @@
+[1mdiff --git a/.idea/workspace.xml b/.idea/workspace.xml[m
+[1mindex c7f5576..5633949 100644[m
+[1m--- a/.idea/workspace.xml[m
+[1m+++ b/.idea/workspace.xml[m
+[36m@@ -23,66 +23,40 @@[m
+     <favorites_list name="www" />[m
+   </component>[m
+   <component name="FileEditorManager">[m
+[31m-    <splitter split-orientation="horizontal" split-proportion="0.63839287">[m
+[31m-      <split-first>[m
+[31m-        <leaf>[m
+[31m-          <file leaf-file-name="home.html" pinned="false" current-in-tab="false">[m
+[31m-            <entry file="file://$PROJECT_DIR$/Zepto项目/手机端网页/home.html">[m
+[31m-              <provider selected="true" editor-type-id="text-editor">[m
+[31m-                <state vertical-scroll-proportion="-19.794872" vertical-offset="818" max-vertical-offset="2070">[m
+[31m-                  <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />[m
+[31m-                  <folding />[m
+[31m-                </state>[m
+[31m-              </provider>[m
+[31m-            </entry>[m
+[31m-          </file>[m
+[31m-          <file leaf-file-name="js.js" pinned="false" current-in-tab="true">[m
+[31m-            <entry file="file://$PROJECT_DIR$/Zepto项目/手机端网页/js/js.js">[m
+[31m-              <provider selected="true" editor-type-id="text-editor">[m
+[31m-                <state vertical-scroll-proportion="0.6987741" vertical-offset="2001" max-vertical-offset="4500">[m
+[31m-                  <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />[m
+[31m-                  <folding />[m
+[31m-                </state>[m
+[31m-              </provider>[m
+[31m-            </entry>[m
+[31m-          </file>[m
+[31m-          <file leaf-file-name="zepto模板.html" pinned="false" current-in-tab="false">[m
+[31m-            <entry file="file://$PROJECT_DIR$/Zepto/zepto竖向滑动模板/zepto模板.html">[m
+[31m-              <provider selected="true" editor-type-id="text-editor">[m
+[31m-                <state vertical-scroll-proportion="-4.4102564" vertical-offset="4058" max-vertical-offset="5040">[m
+[31m-                  <caret line="141" column="21" selection-start-line="141" selection-start-column="21" selection-end-line="141" selection-end-column="21" />[m
+[31m-                  <folding />[m
+[31m-                </state>[m
+[31m-              </provider>[m
+[31m-            </entry>[m
+[31m-          </file>[m
+[31m-          <file leaf-file-name="style.css" pinned="false" current-in-tab="false">[m
+[31m-            <entry file="file://$PROJECT_DIR$/Zepto项目/手机端网页/css/style.css">[m
+[31m-              <provider selected="true" editor-type-id="text-editor">[m
+[31m-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2880">[m
+[31m-                  <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />[m
+[31m-                  <folding />[m
+[31m-                </state>[m
+[31m-              </provider>[m
+[31m-            </entry>[m
+[31m-          </file>[m
+[31m-        </leaf>[m
+[31m-      </split-first>[m
+[31m-      <split-second>[m
+[31m-        <leaf>[m
+[31m-          <file leaf-file-name="style.css" pinned="false" current-in-tab="true">[m
+[31m-            <entry file="file://$PROJECT_DIR$/Zepto项目/手机端网页/css/style.css">[m
+[31m-              <provider selected="true" editor-type-id="text-editor">[m
+[31m-                <state vertical-scroll-proportion="0.36777583" vertical-offset="240" max-vertical-offset="2880">[m
+[31m-                  <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />[m
+[31m-                  <folding />[m
+[31m-                </state>[m
+[31m-              </provider>[m
+[31m-            </entry>[m
+[31m-          </file>[m
+[31m-        </leaf>[m
+[31m-      </split-second>[m
+[31m-    </splitter>[m
+[32m+[m[32m    <leaf>[m
+[32m+[m[32m      <file leaf-file-name="jsAjax3.html" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/21.ajax/jQajax/jsAjax3.html">[m
+[32m+[m[32m          <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m            <state vertical-scroll-proportion="-4.74359" vertical-offset="1555" max-vertical-offset="2550">[m
+[32m+[m[32m              <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />[m
+[32m+[m[32m              <folding>[m
+[32m+[m[32m                <element signature="n#style#0;n#input#2;n#body#0;n#html#0;n#!!top" expanded="true" />[m
+[32m+[m[32m              </folding>[m
+[32m+[m[32m            </state>[m
+[32m+[m[32m          </provider>[m
+[32m+[m[32m        </entry>[m
+[32m+[m[32m      </file>[m
+[32m+[m[32m      <file leaf-file-name="show.html" pinned="false" current-in-tab="false">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/21.ajax/jQajax/show.html">[m
+[32m+[m[32m          <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m            <state vertical-scroll-proportion="-5.5128207" vertical-offset="325" max-vertical-offset="960">[m
+[32m+[m[32m              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />[m
+[32m+[m[32m              <folding />[m
+[32m+[m[32m            </state>[m
+[32m+[m[32m          </provider>[m
+[32m+[m[32m        </entry>[m
+[32m+[m[32m      </file>[m
+[32m+[m[32m      <file leaf-file-name="cookie模拟登陆.html" pinned="false" current-in-tab="true">[m
+[32m+[m[32m        <entry file="file://$PROJECT_DIR$/cookie模拟登陆练习/cookie模拟登陆.html">[m
+[32m+[m[32m          <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m            <state vertical-scroll-proportion="-0.55779815" vertical-offset="3334" max-vertical-offset="4260">[m
+[32m+[m[32m              <caret line="101" column="9" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />[m
+[32m+[m[32m              <folding />[m
+[32m+[m[32m            </state>[m
+[32m+[m[32m          </provider>[m
+[32m+[m[32m        </entry>[m
+[32m+[m[32m      </file>[m
+[32m+[m[32m    </leaf>[m
+   </component>[m
+   <component name="HighlightingSettingsPerFile">[m
+     <setting file="file://$PROJECT_DIR$/Zepto项目/手机端网页/js/js.js" root0="SKIP_INSPECTION" />[m
+[36m@@ -94,6 +68,11 @@[m
+         <option value="$PROJECT_DIR$/Zepto/zepto竖向滑动模板/zepto模板.html" />[m
+         <option value="$PROJECT_DIR$/Zepto项目/手机端网页/css/style.css" />[m
+         <option value="$PROJECT_DIR$/Zepto项目/手机端网页/js/js.js" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/立方体/立方体旋转.html" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/21.ajax/jQajax/jsAjax.html" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/qx/本地存储小练习/show.html" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/21.ajax/jQajax/show.html" />[m
+[32m+[m[32m        <option value="$PROJECT_DIR$/21.ajax/jQajax/jsAjax3.html" />[m
+       </list>[m
+     </option>[m
+   </component>[m
+[36m@@ -147,23 +126,20 @@[m
+               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+             </PATH_ELEMENT>[m
+           </PATH>[m
+[32m+[m[32m        </subPane>[m
+[32m+[m[32m      </pane>[m
+[32m+[m[32m      <pane id="Scope">[m
+[32m+[m[32m        <subPane subId="问题" />[m
+[32m+[m[32m        <subPane subId="Project Files">[m
+           <PATH>[m
+[31m-            <PATH_ELEMENT>[m
+[31m-              <option name="myItemId" value="www" />[m
+[31m-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />[m
+[31m-            </PATH_ELEMENT>[m
+[31m-            <PATH_ELEMENT>[m
+[31m-              <option name="myItemId" value="www" />[m
+[31m-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[31m-            </PATH_ELEMENT>[m
+[31m-            <PATH_ELEMENT>[m
+[31m-              <option name="myItemId" value="Zepto项目" />[m
+[31m-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />[m
+[32m+[m[32m            <PATH_ELEMENT USER_OBJECT="Root">[m
+[32m+[m[32m              <option name="myItemId" value="" />[m
+[32m+[m[32m              <option name="myItemType" value="" />[m
+             </PATH_ELEMENT>[m
+           </PATH>[m
+         </subPane>[m
+[32m+[m[32m        <subPane subId="测试" />[m
+       </pane>[m
+[31m-      <pane id="Scope" />[m
+     </panes>[m
+   </component>[m
+   <component name="PropertiesComponent">[m
+[36m@@ -171,8 +147,20 @@[m
+     <property name="last_opened_file_path" value="$PROJECT_DIR$" />[m
+     <property name="HbShouldOpenHtmlAsHb" value="" />[m
+     <property name="FullScreen" value="false" />[m
+[32m+[m[32m    <property name="recentsLimit" value="5" />[m
+[32m+[m[32m    <property name="DefaultHtmlFileTemplate" value="Html5" />[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="RecentsManager">[m
+[32m+[m[32m    <key name="CopyFile.RECENT_KEYS">[m
+[32m+[m[32m      <recent name="E:\wampserver\wamp\www\21.ajax\jQajax" />[m
+[32m+[m[32m    </key>[m
+   </component>[m
+[31m-  <component name="RunManager">[m
+[32m+[m[32m  <component name="RunManager" selected="JavaScript Debug.show.html">[m
+[32m+[m[32m    <configuration default="false" name="show.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:1238/www/qx/本地存储小练习/show.html">[m
+[32m+[m[32m      <RunnerSettings RunnerId="JavascriptDebugRunner" />[m
+[32m+[m[32m      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />[m
+[32m+[m[32m      <method />[m
+[32m+[m[32m    </configuration>[m
+     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">[m
+       <method />[m
+     </configuration>[m
+[36m@@ -203,9 +191,22 @@[m
+       <method />[m
+     </configuration>[m
+     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">[m
+[32m+[m[32m      <node-options />[m
+[32m+[m[32m      <gulpfile />[m
+[32m+[m[32m      <tasks />[m
+[32m+[m[32m      <arguments />[m
+[32m+[m[32m      <pass-parent-envs>true</pass-parent-envs>[m
+[32m+[m[32m      <envs />[m
+       <method />[m
+     </configuration>[m
+[31m-    <list size="0" />[m
+[32m+[m[32m    <list size="1">[m
+[32m+[m[32m      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.show.html" />[m
+[32m+[m[32m    </list>[m
+[32m+[m[32m    <recent_temporary>[m
+[32m+[m[32m      <list size="1">[m
+[32m+[m[32m        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.show.html" />[m
+[32m+[m[32m      </list>[m
+[32m+[m[32m    </recent_temporary>[m
+   </component>[m
+   <component name="ShelveChangesManager" show_recycled="false" />[m
+   <component name="SvnConfiguration">[m
+[36m@@ -220,31 +221,75 @@[m
+     </task>[m
+     <servers />[m
+   </component>[m
+[32m+[m[32m  <component name="TodoView" selected-index="0">[m
+[32m+[m[32m    <todo-panel id="selected-file">[m
+[32m+[m[32m      <are-packages-shown value="false" />[m
+[32m+[m[32m      <are-modules-shown value="false" />[m
+[32m+[m[32m      <flatten-packages value="false" />[m
+[32m+[m[32m      <is-autoscroll-to-source value="false" />[m
+[32m+[m[32m    </todo-panel>[m
+[32m+[m[32m    <todo-panel id="all">[m
+[32m+[m[32m      <are-packages-shown value="false" />[m
+[32m+[m[32m      <are-modules-shown value="false" />[m
+[32m+[m[32m      <flatten-packages value="false" />[m
+[32m+[m[32m      <is-autoscroll-to-source value="false" />[m
+[32m+[m[32m    </todo-panel>[m
+[32m+[m[32m    <todo-panel id="default-changelist">[m
+[32m+[m[32m      <are-packages-shown value="false" />[m
+[32m+[m[32m      <are-modules-shown value="false" />[m
+[32m+[m[32m      <flatten-packages value="false" />[m
+[32m+[m[32m      <is-autoscroll-to-source value="false" />[m
+[32m+[m[32m    </todo-panel>[m
+[32m+[m[32m  </component>[m
+   <component name="ToolWindowManager">[m
+     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />[m
+[31m-    <editor active="false" />[m
+[32m+[m[32m    <editor active="true" />[m
+     <layout>[m
+[31m-      <window_info id="更改" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />[m
+[31m-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />[m
+[31m-      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />[m
+[31m-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />[m
+[31m-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="更改" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7047308" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />[m
+[31m-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />[m
+[31m-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />[m
+[31m-      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />[m
+[31m-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />[m
+[31m-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16666667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />[m
+[32m+[m[32m      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16666667" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />[m
+       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />[m
+[31m-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />[m
+       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />[m
+       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />[m
+     </layout>[m
+[32m+[m[32m    <layout-to-restore>[m
+[32m+[m[32m      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7047308" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16666667" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="更改" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16666667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />[m
+[32m+[m[32m      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />[m
+[32m+[m[32m      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />[m
+[32m+[m[32m    </layout-to-restore>[m
+   </component>[m
+   <component name="Vcs.Log.UiProperties">[m
+     <option name="RECENTLY_FILTERED_USER_GROUPS">[m
+[36m@@ -261,53 +306,323 @@[m
+     <option name="myTodoPanelSettings">[m
+       <TodoPanelSettings />[m
+     </option>[m
+[32m+[m[32m    <ignored-roots>[m
+[32m+[m[32m      <path value="$PROJECT_DIR$" />[m
+[32m+[m[32m      <path value="$PROJECT_DIR$/home" />[m
+[32m+[m[32m    </ignored-roots>[m
+   </component>[m
+   <component name="XDebuggerManager">[m
+     <breakpoint-manager />[m
+     <watches-manager />[m
+   </component>[m
+[32m+[m[32m  <component name="XPathView.XPathProjectComponent">[m
+[32m+[m[32m    <history />[m
+[32m+[m[32m    <find-history />[m
+[32m+[m[32m  </component>[m
+   <component name="editorHistoryManager">[m
+[31m-    <entry file="file://$PROJECT_DIR$/Zepto/zepto项目源码/js/touch.js">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/21.ajax/jQajax/jsAjax3.html">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5130">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="2550">[m
+[32m+[m[32m          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />[m
+[32m+[m[32m          <folding>[m
+[32m+[m[32m            <element signature="n#style#0;n#input#2;n#body#0;n#html#0;n#!!top" expanded="true" />[m
+[32m+[m[32m          </folding>[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/21.ajax/jQajax/show.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">[m
+           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/cookie/本地存储.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="175" max-vertical-offset="900">[m
+[32m+[m[32m          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/cookie/cookie.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="295" max-vertical-offset="1110">[m
+[32m+[m[32m          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/cookie模拟登陆练习/cookie模拟登陆.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="3514" max-vertical-offset="4260">[m
+[32m+[m[32m          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/21.ajax/jQajax/jsAjax3.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="2550">[m
+[32m+[m[32m          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />[m
+           <folding>[m
+[31m-            <element signature="n#!!doc" expanded="true" />[m
+[32m+[m[32m            <element signature="n#style#0;n#input#2;n#body#0;n#html#0;n#!!top" expanded="true" />[m
+           </folding>[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[31m-    <entry file="file://$PROJECT_DIR$/Zepto/zepto竖向滑动模板/zepto模板.html">[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/21.ajax/jQajax/show.html">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state vertical-scroll-proportion="-4.4102564" vertical-offset="4058" max-vertical-offset="5040">[m
+[31m-          <caret line="141" column="21" selection-start-line="141" selection-start-column="21" selection-end-line="141" selection-end-column="21" />[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">[m
+[32m+[m[32m          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/cookie/本地存储.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="175" max-vertical-offset="900">[m
+[32m+[m[32m          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/cookie/cookie.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="295" max-vertical-offset="1110">[m
+[32m+[m[32m          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/cookie模拟登陆练习/cookie模拟登陆.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="3514" max-vertical-offset="4260">[m
+[32m+[m[32m          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/24.老李/home.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="115" max-vertical-offset="750">[m
+[32m+[m[32m          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/24.老李/json2.json">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">[m
+[32m+[m[32m          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/24.老李/ajax.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">[m
+[32m+[m[32m          <caret line="0" column="11" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/bilibili/Home.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="23970">[m
+[32m+[m[32m          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/立方体/立方体旋转.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4650">[m
+[32m+[m[32m          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+     <entry file="file://$PROJECT_DIR$/Zepto项目/手机端网页/home.html">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state vertical-scroll-proportion="-19.794872" vertical-offset="818" max-vertical-offset="2070">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="818" max-vertical-offset="2070">[m
+           <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />[m
+[31m-          <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+     <entry file="file://$PROJECT_DIR$/Zepto项目/手机端网页/js/js.js">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state vertical-scroll-proportion="0.6987741" vertical-offset="2001" max-vertical-offset="4500">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="2001" max-vertical-offset="4500">[m
+           <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />[m
+[31m-          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/Zepto/zepto竖向滑动模板/zepto模板.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="4058" max-vertical-offset="5040">[m
+[32m+[m[32m          <caret line="141" column="21" selection-start-line="141" selection-start-column="21" selection-end-line="141" selection-end-column="21" />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+     <entry file="file://$PROJECT_DIR$/Zepto项目/手机端网页/css/style.css">[m
+       <provider selected="true" editor-type-id="text-editor">[m
+[31m-        <state vertical-scroll-proportion="0.36777583" vertical-offset="240" max-vertical-offset="2880">[m
+[31m-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2880">[m
+[32m+[m[32m          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/Zepto/zepto项目源码/js/touch.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5130">[m
+[32m+[m[32m          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/Zepto项目/手机端网页/home.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="818" max-vertical-offset="2070">[m
+[32m+[m[32m          <caret line="53" column="45" selection-start-line="53" selection-start-column="45" selection-end-line="53" selection-end-column="45" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/Zepto项目/手机端网页/js/js.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="2001" max-vertical-offset="4500">[m
+[32m+[m[32m          <caret line="75" column="30" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/Zepto/zepto竖向滑动模板/zepto模板.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.32330826" vertical-offset="4058" max-vertical-offset="5040">[m
+[32m+[m[32m          <caret line="141" column="21" selection-start-line="141" selection-start-column="21" selection-end-line="141" selection-end-column="21" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/Zepto项目/手机端网页/css/style.css">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.20547946" vertical-offset="240" max-vertical-offset="2880">[m
+[32m+[m[32m          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/立方体/立方体旋转.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="1.3761468" vertical-offset="3570" max-vertical-offset="4650">[m
+[32m+[m[32m          <caret line="144" column="18" selection-start-line="144" selection-start-column="18" selection-end-line="144" selection-end-column="18" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/core-scripting.rnc">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.3321918" vertical-offset="5236" max-vertical-offset="10410">[m
+[32m+[m[32m          <caret line="181" column="28" selection-start-line="181" selection-start-column="18" selection-end-line="181" selection-end-column="28" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/meta.rnc">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="-5.5166373" vertical-offset="3330" max-vertical-offset="11130">[m
+[32m+[m[32m          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/24.老李/json2.json">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">[m
+[32m+[m[32m          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/24.老李/ajax.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">[m
+[32m+[m[32m          <caret line="0" column="11" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/24.老李/home.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="-4.74359" vertical-offset="115" max-vertical-offset="750">[m
+[32m+[m[32m          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/bilibili/Home.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="-0.96428573" vertical-offset="21963" max-vertical-offset="23970">[m
+[32m+[m[32m          <caret line="715" column="22" selection-start-line="715" selection-start-column="22" selection-end-line="715" selection-end-column="22" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="34550" max-vertical-offset="144030">[m
+[32m+[m[32m          <caret line="1158" column="17" selection-start-line="1158" selection-start-column="17" selection-end-line="1158" selection-end-column="17" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/21.ajax/jQajax/angular.min.js">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6450">[m
+[32m+[m[32m          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/cookie/本地存储.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.6146789" vertical-offset="175" max-vertical-offset="900">[m
+[32m+[m[32m          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/cookie/cookie.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="0.119266056" vertical-offset="295" max-vertical-offset="1110">[m
+[32m+[m[32m          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/21.ajax/jQajax/jsAjax3.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="-4.74359" vertical-offset="1555" max-vertical-offset="2550">[m
+[32m+[m[32m          <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />[m
+[32m+[m[32m          <folding>[m
+[32m+[m[32m            <element signature="n#style#0;n#input#2;n#body#0;n#html#0;n#!!top" expanded="true" />[m
+[32m+[m[32m          </folding>[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/21.ajax/jQajax/show.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="-5.5128207" vertical-offset="325" max-vertical-offset="960">[m
+[32m+[m[32m          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />[m
+           <folding />[m
+         </state>[m
+       </provider>[m
+     </entry>[m
+[32m+[m[32m    <entry file="file://$PROJECT_DIR$/cookie模拟登陆练习/cookie模拟登陆.html">[m
+[32m+[m[32m      <provider selected="true" editor-type-id="text-editor">[m
+[32m+[m[32m        <state vertical-scroll-proportion="-0.55779815" vertical-offset="3334" max-vertical-offset="4260">[m
+[32m+[m[32m          <caret line="101" column="9" selection-start-line="101" selection-start-column="9" selection-end-line="101" selection-end-column="9" />[m
+[32m+[m[32m          <folding />[m
+[32m+[m[32m        </state>[m
+[32m+[m[32m      </provider>[m
+[32m+[m[32m    </entry>[m
+[32m+[m[32m  </component>[m
+[32m+[m[32m  <component name="masterDetails">[m
+[32m+[m[32m    <states>[m
+[32m+[m[32m      <state key="ScopeChooserConfigurable.UI">[m
+[32m+[m[32m        <settings>[m
+[32m+[m[32m          <splitter-proportions>[m
+[32m+[m[32m            <option name="proportions">[m
+[32m+[m[32m              <list>[m
+[32m+[m[32m                <option value="0.2" />[m
+[32m+[m[32m              </list>[m
+[32m+[m[32m            </option>[m
+[32m+[m[32m          </splitter-proportions>[m
+[32m+[m[32m        </settings>[m
+[32m+[m[32m      </state>[m
+[32m+[m[32m    </states>[m
+   </component>[m
+ </project>[m
+\ No newline at end of file[m
+[1mdiff --git a/bilibili/Home.html b/bilibili/Home.html[m
+[1mindex 8a5d798..62c0fc3 100644[m
+[1m--- a/bilibili/Home.html[m
+[1m+++ b/bilibili/Home.html[m
+[36m@@ -612,6 +612,7 @@[m
+ 						<img src="img/oYYBAFdLsG-ACCXgAADB-gDyi8o547.jpg" alt="" />[m
+ 					</li>				[m
+ 				</ul>[m
+[32m+[m[41m				[m
+ 				<ul class="mate">[m
+ 					<li class="P" id="P">[m
+ 						<span class="yeMa"></span>[m
+[36m@@ -641,7 +642,58 @@[m
+ 				<div class="next page">周一</div>[m
+ 			</div>[m
+ 		</div>[m
+[31m-[m
+[32m+[m[41m		[m
+[32m+[m		[32m<div class="p0">[m
+[32m+[m[32m            <div class="tit-box">[m
+[32m+[m[32m                <i></i><h2>推广</h2> <a href="###">我就问！还有谁？</a>[m
+[32m+[m[32m                <div class="tit-right">[m
+[32m+[m[41m                [m	[32m<span><a href="###">[m
+[32m+[m[41m                [m		[32m在线人数：190966[m
+[32m+[m[41m                [m	[32m</a></span>[m
+[32m+[m[41m                [m	[32m<i class="tit-r-line"></i>[m
+[32m+[m[41m                [m	[32m<span><a href="###">[m
+[32m+[m[41m                [m		[32m投稿人数：888[m
+[32m+[m[41m                [m	[32m</a></span>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <ul class="left-list">[m
+[32m+[m[41m            [m	[32m<li>[m
+[32m+[m[41m            [m		[32m<a href="###">[m
+[32m+[m[41m            [m			[32m<img src="img/b54981cae6c1c941d26572ae468f8b4cdc4fdd7a.jpg"/><br />[m
+[32m+[m[41m            [m			[32m<a href="###" class="title">魅蓝3s首发评测</a>[m
+[32m+[m[41m            [m		[32m</a>[m
+[32m+[m[41m            [m	[32m</li>[m
+[32m+[m[41m            [m	[32m<li>[m
+[32m+[m[41m            [m		[32m<a href="###">[m
+[32m+[m[41m            [m			[32m<img src="img/b96fe5a0924f328186dea9559c7df5b9019057aa (2).jpg"/><br />[m
+[32m+[m[41m            [m			[32m<a href="###" class="title">不会再让你逃走 ; [伪恋/合作]</a>[m
+[32m+[m[41m            [m		[32m</a>[m
+[32m+[m[41m            [m	[32m</li>[m
+[32m+[m[41m            [m	[32m<li>[m
+[32m+[m[41m            [m		[32m<a href="###">[m
+[32m+[m[41m            [m			[32m<img src="img/9f76dd270a3c6e668d92e5169762f0d2ec382ec7.jpg"/><br />[m
+[32m+[m[41m            [m			[32m<a href="###" class="title">E3 2016 预告(合集)</a>[m
+[32m+[m[41m            [m		[32m</a>[m
+[32m+[m[41m            [m	[32m</li>[m
+[32m+[m[41m            [m	[32m<li>[m
+[32m+[m[41m            [m		[32m<a href="###">[m
+[32m+[m[41m            [m			[32m<img src="img/d577dc80153de42590ac077fb4ebf6d787717f8b.jpg"/><br />[m
+[32m+[m[41m            [m			[32m<a href="###" class="title">【在下坂本 有何贵干】危险的坂本君</a>[m
+[32m+[m[41m            [m		[32m</a>[m
+[32m+[m[41m            [m	[32m</li>[m
+[32m+[m[32m            </ul>[m
+[32m+[m[32m            <div class="right-photo">[m
+[32m+[m[41m            [m	[32m<a href="###">[m
+[32m+[m[41m            [m		[32m<img src="img/262c75ea4ece7f88b86864f72446706b.jpg"/>[m
+[32m+[m[41m            [m	[32m</a>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div class="advertBox">[m
+[32m+[m			[32m<a href="###" class="advert">[m
+[32m+[m				[32m<img src="img/483da7b9175e89ff55b554a115023785990d56da.jpg"/><br />[m
+[32m+[m				[32m<a href="###" class="title">魅蓝3s首发评测</a>[m
+[32m+[m			[32m</a>[m
+[32m+[m		[32m</div>[m
+         <!--↓↓↓下面是电梯-->[m
+         <div class="content p1">[m
+             <ul class="b-tab">[m
+[36m@@ -650,6 +702,7 @@[m
+                     <span class="title" name="最新">最新</span>[m
+                     <span class="horn"></span>[m
+                 </li>[m
+[32m+[m[41m                [m
+                 <li class="week w1" name="一">[m
+                     <span>一</span>[m
+                 </li>[m
+[36m@@ -678,44 +731,45 @@[m
+                 </ul>[m
+             </div>[m
+         </div>[m
+[32m+[m[41m        [m
+         <div class="content p2">[m
+             <div class="tit-box">[m
+[31m-                <i></i><span>正在直播</span>[m
+[32m+[m[32m                <i></i><h2>正在直播</h2>[m
+             </div>		2[m
+         </div>[m
+         <div class="content p3">[m
+             <div class="tit-box">[m
+[31m-                <i></i><span>动漫</span>[m
+[32m+[m[32m                <i></i><h2>动漫</h2>[m
+             </div>		3[m
+         </div>[m
+         <div class="content p4">[m
+             <div class="tit-box">[m
+[31m-                <i></i><span>音乐</span>[m
+[32m+[m[32m                <i></i><h2>音乐</h2>[m
+             </div>		4[m
+         </div>[m
+         <div class="content p5">[m
+             <div class="tit-box">[m
+[31m-                <i></i><span>舞蹈</span>[m
+[32m+[m[32m                <i></i><h2>舞蹈</h2>[m
+             </div>		5[m
+         </div>[m
+         <div class="content p6">[m
+             <div class="tit-box">[m
+[31m-                <i></i><span>游戏</span>[m
+[32m+[m[32m                <i></i><h2>游戏</h2>[m
+             </div>		6[m
+         </div>[m
+         <div class="content p7">[m
+             <div class="tit-box">[m
+[31m-                <i></i><span>科技</span>[m
+[32m+[m[32m                <i></i><h2>科技</h2>[m
+             </div>		7[m
+         </div>[m
+         <div class="content p8">[m
+             <div class="tit-box">[m
+[31m-                <i></i><span>娱乐</span>[m
+[32m+[m[32m                <i></i><h2>娱乐</h2>[m
+             </div>		8[m
+         </div>[m
+         <div class="content p9">[m
+             <div class="tit-box">[m
+[31m-                <i></i><span>鬼畜</span>[m
+[32m+[m[32m                <i></i><h2>鬼畜</h2>[m
+             </div>		9[m
+         </div>[m
+         <ul class="border">[m
+[1mdiff --git a/bilibili/css/home_style.css b/bilibili/css/home_style.css[m
+[1mindex 5e58e76..2ee37ea 100644[m
+[1m--- a/bilibili/css/home_style.css[m
+[1m+++ b/bilibili/css/home_style.css[m
+[36m@@ -605,6 +605,22 @@[m [mimg{[m
+     opacity: .6;[m
+ }[m
+ [m
+[32m+[m[32m.advertBox{[m
+[32m+[m	[32moverflow: hidden;[m
+[32m+[m	[32mmargin: 26px auto 0;[m
+[32m+[m	[32mwidth: 1129px;[m
+[32m+[m	[32mheight: 93px;[m
+[32m+[m	[32mborder-radius: 6px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.advert{[m
+[32m+[m	[32mfloat: left;[m
+[32m+[m	[32moverflow: hidden;[m
+[32m+[m[32m}[m
+[32m+[m[32m.advert img{[m
+[32m+[m	[32mfloat: left;[m
+[32m+[m	[32mwidth: 100%;[m
+[32m+[m	[32mheight: 100%;[m
+[32m+[m[32m}[m
+ /*	↓↓↓楼层样式	*/[m
+ .content{[m
+     margin: 50px auto 0;[m
+[36m@@ -613,11 +629,96 @@[m [mimg{[m
+     /*background: #F2F2F2;*/[m
+     box-shadow: 0 1px 3px 0 #999;[m
+ }[m
+[31m-.content i{[m
+[32m+[m[32m.p0{[m
+[32m+[m	[32mmargin: 50px auto 0;[m
+[32m+[m[32m    width: 1126px;[m
+[32m+[m[32m    height: 245px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.content .tit-box,[m
+[32m+[m[32m.p0 .tit-box{[m
+[32m+[m	[32moverflow: hidden;[m
+[32m+[m	[32mline-height: 40px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.content .tit-box h2,[m
+[32m+[m[32m.p0 .tit-box h2{[m
+[32m+[m	[32mfloat: left;[m
+[32m+[m	[32mfont-weight: normal;[m
+[32m+[m[32m}[m
+[32m+[m[32m.p0 .tit-box a{[m
+[32m+[m	[32mmargin: 18px 0 0 10px;[m
+[32m+[m	[32mfloat: left;[m
+[32m+[m	[32mfont-size: 12px;[m
+[32m+[m	[32mcolor: #888;[m
+[32m+[m	[32mline-height: normal;[m
+[32m+[m[32m}[m
+[32m+[m[32m.p0 .tit-box a:hover{[m
+[32m+[m	[32mcolor: #00A1D6;[m
+[32m+[m[32m}[m
+[32m+[m[32m.p0 .tit-right{[m
+[32m+[m	[32mfloat: right;[m
+[32m+[m	[32mborder-radius: 4px;[m
+[32m+[m	[32mbackground: #E5E9EF;[m
+[32m+[m	[32mpadding: 0 20px;[m
+[32m+[m	[32moverflow: hidden;[m
+[32m+[m[32m}[m
+[32m+[m[32m.p0 .tit-right span{[m
+[32m+[m	[32mfloat: left;[m
+[32m+[m	[32mheight: 34px;[m
+[32m+[m	[32mline-height: 34px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.p0 .tit-right span a{[m
+[32m+[m	[32mmargin: 0;[m
+[32m+[m	[32mfloat: none;[m
+[32m+[m[32m}[m
+[32m+[m[32m.p0 .tit-right .tit-r-line{[m
+[32m+[m	[32mdisplay: inline-block;[m
+[32m+[m	[32mmargin: 12px 10px 0;[m
+[32m+[m	[32mwidth: 1px;[m
+[32m+[m	[32mheight: 12px;[m
+[32m+[m	[32mbackground: #999;[m
+[32m+[m[32m}[m
+[32m+[m[32m.content i,[m
+[32m+[m[32m.p0 i{[m
+     float: left;[m
+[31m-    width: 40px;[m
+[32m+[m[32m    width: 44px;[m
+     height: 40px;[m
+ }[m
+[32m+[m[32m.p0 .left-list{[m
+[32m+[m	[32mfloat: left;[m
+[32m+[m	[32mpadding: 10px 0 0 0;[m
+[32m+[m	[32moverflow: hidden;[m
+[32m+[m	[32mtext-align: center;[m
+[32m+[m[32m}[m
+[32m+[m[32m.p0 .left-list li{[m
+[32m+[m	[32mfloat: left;[m
+[32m+[m	[32mmargin: 0 20px 20px 0;[m
+[32m+[m[32m}[m
+[32m+[m[32m.p0 .left-list a img{[m
+[32m+[m	[32mmargin-bottom: 10px;[m
+[32m+[m	[32mfloat: left;[m
+[32m+[m	[32mwidth: 180px;[m
+[32m+[m	[32mheight: 110px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.p0 .left-list .title{[m
+[32m+[m	[32mdisplay: inline-block;[m
+[32m+[m	[32mwidth: 160px;[m
+[32m+[m	[32mfont-size: 12px;[m
+[32m+[m	[32mline-height: normal;[m
+[32m+[m[32m}[m
+[32m+[m[32m.p0 .left-list .title:hover{[m
+[32m+[m	[32mcolor: #00A1D6;[m
+[32m+[m[32m}[m
+[32m+[m[32m.p0 .right-photo{[m
+[32m+[m	[32mmargin-top: 10px;[m
+[32m+[m	[32mfloat: left;[m
+[32m+[m	[32moverflow: hidden;[m
+[32m+[m[32m}[m
+[32m+[m[32m.p0 .right-photo img{[m
+[32m+[m	[32mdisplay: inline-block;[m
+[32m+[m	[32mwidth: 326px;[m
+[32m+[m	[32mheight: 180px;[m
+[32m+[m	[32mborder-radius: 4px;[m
+[32m+[m[32m}[m
+ /*.content .title{*/[m
+     /*float: left;*/[m
+     /*margin-left: 8px;*/[m
+[36m@@ -629,7 +730,7 @@[m [mimg{[m
+     /*color: #333;*/[m
+ /*}*/[m
+ .p1{[m
+[31m-    margin-top: 150px;[m
+[32m+[m[32m    margin-top: 70px;[m
+ }[m
+ .content .b-tab{[m
+     width: 700px;[m
+[36m@@ -721,9 +822,13 @@[m [mimg{[m
+     background-position: -805px -38px;[m
+ }[m
+ [m
+[31m-.content i{[m
+[32m+[m[32m.content i,[m
+[32m+[m[32m.p0 i{[m
+     background: url(../img/icons.png) no-repeat -140px -652px;[m
+ }[m
+[32m+[m[32m.p0 i{[m
+[32m+[m[32m    background-position: -140px -78px;[m
+[32m+[m[32m}[m
+ .p2 i{[m
+     background-position: -140px -910px;[m
+ }[m
+[1mdiff --git a/home b/home[m
+[1m--- a/home[m
+[1m+++ b/home[m
+[36m@@ -1 +1 @@[m
+[31m-Subproject commit 15276fb67bc0e4e37225d326f56265637248228d[m
+[32m+[m[32mSubproject commit 15276fb67bc0e4e37225d326f56265637248228d-dirty[m
+[1mdiff --git "a/\347\253\213\346\226\271\344\275\223/\347\253\213\346\226\271\344\275\223\346\227\213\350\275\254.html" "b/\347\253\213\346\226\271\344\275\223/\347\253\213\346\226\271\344\275\223\346\227\213\350\275\254.html"[m
+[1mindex fb3b097..f431146 100644[m
+[1m--- "a/\347\253\213\346\226\271\344\275\223/\347\253\213\346\226\271\344\275\223\346\227\213\350\275\254.html"[m
+[1m+++ "b/\347\253\213\346\226\271\344\275\223/\347\253\213\346\226\271\344\275\223\346\227\213\350\275\254.html"[m
+[36m@@ -9,7 +9,7 @@[m
+ 		body{[m
+ 			background: url("img/bg.jpg") no-repeat 0 0;[m
+ 			background-size: 100%;[m
+[31m-			-webkit-perspective:700;[m
+[32m+[m			[32m-webkit-perspective:700px;[m
+ 		}[m
+ 		#box{[m
+ 			width: 200px;[m
+[36m@@ -140,6 +140,11 @@[m
+ 		for (var i = 0; i < lis.length; i++) {[m
+ 			lis[i].style.background = "url(img/0"+(i+1)+".png)";[m
+ 		};[m
+[32m+[m[32m        try{[m
+[32m+[m
+[32m+[m[32m        }catch(e){[m
+[32m+[m
+[32m+[m[32m        }[m
+ 	</script>[m
+ </body>[m
+ </html>[m
+\ No newline at end of file[m
+warning: LF will be replaced by CRLF in .idea/workspace.xml.
+The file will have its original line endings in your working directory.

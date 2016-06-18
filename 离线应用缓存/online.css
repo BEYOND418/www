@@ -1,0 +1,7 @@
+.offline{
+	display: none;
+}
+.online{
+	font-size: 40px;
+	color: #add;
+}

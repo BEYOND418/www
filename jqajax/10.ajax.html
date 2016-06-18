@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>10.jqAJAX</title>
+	<script src="jq.js"></script>
+</head>
+<body>
+	<script>
+	$.ajax({
+		type:"get",  //请求类型
+		url:"http://180.76.185.227/lj/ljp.php",
+		dataType:"json",//要请求的数据类型	
+		success:function(data){
+			console.log(data);
+		},
+		error:function(){
+			alert("xxxx");
+		}
+	});
+
+	$.get({
+		url:"http://180.76.185.227/lj/ljp.php",
+		callback:function(data){
+			console.log(data);
+		},
+		type:"json"
+	});
+	</script>
+</body>
+</html>

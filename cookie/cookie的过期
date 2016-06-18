@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1.cookie</title>
+</head>
+<body>
+	<button>写入button</button>
+	<script>
+	//cookie的过期
+	var btn = document.getElementsByTagName('button')[0];
+	var t=new Date(2016,4,26,10,24,0);
+	console.log(t)
+
+	btn.onclick = function(){
+		document.cookie = 'name=liji;expires='+t;
+	}
+	</script>
+</body>
+</html>
